@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "title": "Crous Auto",
+        "image": "manage.png",
+        "tags": ["PHP", "Javascript", "SQL"],
+        "link": "/crous-auto"
+    },
+    {
+        "id": 1,
+        "title": "Crous Reservation Salle",
+        "image": "manage.png",
+        "tags": ["PHP", "Javascript", "SQL"],
+        "link": "/crous-reservation-salle"
+    },
+    {
+        "id": 2,
+        "title": "Hulu Clone",
+        "image": "hulu-clone.png",
+        "tags": ["ReactJS", "NextJS", "Tailwind"],
+        "link": "/hulu-clone"
+    },
+    {
+        "id": 3,
+        "title": "Manage",
+        "image": "manage.png",
+        "tags": ["ReactJS", "Tailwind"],
+        "link": "/manage"
+    },
+    {
+        "id": 4,
+        "title": "EasyBank",
+        "image": "easy-bank.png",
+        "tags": ["ReactJS", "NextJS", "ChakraUI", "Tailwind"],
+        "link": "/easybank"
+    },
+    {
+        "id": 5,
+        "title": "Organisation mondiale de la solidarité",
+        "image": "oms.png",
+        "tags": ["WordPress", "Elementor"],
+        "link": "/oms"
+    }
+]
