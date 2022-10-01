@@ -24,7 +24,7 @@ export default function Project({ id, link, src, label, tags }) {
         <div className="absolute bottom-0 left-0 flex flex-col ml-5 mb-5">
           <div className="flex flex-row space-x-3">
             {tags.map((tag) => (
-              <Tag>{tag}</Tag>
+              <Tag key={tags.indexOf(tag)}>{tag}</Tag>
             ))}
           </div>
         </div>

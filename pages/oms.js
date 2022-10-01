@@ -26,9 +26,10 @@ export default function Oms() {
                 Description
               </h3>
               <p>
-                L'organisation mondiale de la solidarité est une association
-                située à Besançon dans l'Est de la France et qui a pour but de
-                récolter des dons et aider les personnes dans le besoin.
+                L&apos;organisation mondiale de la solidarité est une
+                association située à Besançon dans l&apos;Est de la France et
+                qui a pour but de récolter des dons et aider les personnes dans
+                le besoin.
               </p>
             </div>
             <div className="flex flex-row space-x-24 ">
