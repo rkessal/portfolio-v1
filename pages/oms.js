@@ -55,15 +55,21 @@ export default function Oms() {
               <h3 className="text-xl font-medium uppercase tracking-wider">
                 Images
               </h3>
-              <div className="flex flex-row  overflow-x-scroll w-full  space-x-16 min-h-64">
-                <div className="flex-grow-0 flex-shrink-0 w-full relative">
-                  <Image src="/oms.png" layout="fill" objectFit="cover" />
+              <div className="flex flex-col items-center space-x-3 justify-evenly md:flex-row">
+                <div className="rounded-lg shadow-lg overflow-hidden">
+                  <Image
+                    src="/oms.png"
+                    width={1920}
+                    height={887}
+                    objectFit="contain"
+                  />
                 </div>
-                <div className="flex-grow-0 flex-shrink-0 w-1/4 relative">
+                <div className="rounded-lg shadow-lg  overflow-hidden">
                   <Image
                     src="/oms-mobile.png"
-                    layout="fill"
-                    objectFit="cover"
+                    width={462}
+                    height={887}
+                    objectFit="contain"
                   />
                 </div>
               </div>
