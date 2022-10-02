@@ -1,9 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import Main from "../layouts/main";
 import Section from "../layouts/section";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
 export default function Oms() {
+  const [fullscreen, setFullScreen] = useState(false);
+
+  function disableScroll() {}
+
   return (
     <>
       <Head>
@@ -17,6 +25,13 @@ export default function Oms() {
       </Head>
       <Main>
         <Section>
+          <div
+            className={
+              fullscreen
+                ? "fixed top-0 right-0 bottom-0 left-0 bg-gray-700 opacity-50 z-20"
+                : "hidden"
+            }
+          />
           <h1 className="uppercase tracking-wider text-4xl text-redMain font-medium mb-24 lg:w-2/3 lg:text-6xl">
             Organisation mondiale de la solidarité
           </h1>
@@ -44,11 +59,8 @@ export default function Oms() {
                 <h3 className="text-xl font-medium uppercase tracking-wider">
                   Liens
                 </h3>
-                <Link href="#">
+                <Link href="http://organisationmondialedelasolidarite.com/">
                   <a>Site</a>
-                </Link>
-                <Link href="#">
-                  <a>Repo</a>
                 </Link>
               </div>
             </div>
@@ -56,22 +68,46 @@ export default function Oms() {
               <h3 className="text-xl font-medium uppercase tracking-wider">
                 Images
               </h3>
-              <div className="flex flex-col items-center space-x-3 justify-evenly md:flex-row">
-                <div className="rounded-lg shadow-lg overflow-hidden">
-                  <Image
-                    src="/oms.png"
-                    width={1920}
-                    height={887}
-                    objectFit="contain"
-                  />
+              <div className="flex flex-col grid-cols-5 auto-rows-min space-y-3 md:gap-3 md:space-y-0 md:grid ">
+                <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 ">
+                  <Zoom>
+                    <Image
+                      src="/oms.png"
+                      layout="responsive"
+                      width={1920}
+                      height={887}
+                    />
+                  </Zoom>
                 </div>
-                <div className="rounded-lg shadow-lg  overflow-hidden">
-                  <Image
-                    src="/oms-mobile.png"
-                    width={462}
-                    height={887}
-                    objectFit="contain"
-                  />
+                <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
+                  <Zoom>
+                    <Image
+                      src="/oms-mobile.png"
+                      layout="responsive"
+                      width={450}
+                      height={887}
+                    />
+                  </Zoom>
+                </div>
+                <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 md:order-2">
+                  <Zoom>
+                    <Image
+                      src="/oms-2.png"
+                      layout="responsive"
+                      width={1920}
+                      height={887}
+                    />
+                  </Zoom>
+                </div>
+                <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
+                  <Zoom>
+                    <Image
+                      src="/oms-2-mobile.png"
+                      layout="responsive"
+                      width={450}
+                      height={887}
+                    />
+                  </Zoom>
                 </div>
               </div>
             </div>
