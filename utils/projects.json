@@ -1,35 +1,35 @@
 [
   {
     "id": 0,
-    "title": "Crous Auto",
+    "title": "Crous Auto (en cours)",
     "image": "manage.png",
     "tags": ["PHP", "Javascript", "SQL"],
     "link": "/crous-auto"
   },
   {
     "id": 1,
-    "title": "Crous Reservation Salle",
+    "title": "Crous Reservation Salle (en cours)",
     "image": "manage.png",
     "tags": ["PHP", "Javascript", "SQL"],
     "link": "/crous-reservation-salle"
   },
   {
     "id": 2,
-    "title": "Hulu Clone",
+    "title": "Hulu Clone (en cours)",
     "image": "hulu-clone.png",
     "tags": ["NextJS", "Tailwind"],
     "link": "/hulu-clone"
   },
   {
     "id": 3,
-    "title": "Manage",
+    "title": "Manage (en cours)",
     "image": "manage.png",
     "tags": ["ReactJS", "Tailwind"],
     "link": "/manage"
   },
   {
     "id": 4,
-    "title": "EasyBank",
+    "title": "EasyBank (en cours)",
     "image": "easy-bank.png",
     "tags": ["NextJS", "ChakraUI"],
     "link": "/easybank"
@@ -37,7 +37,7 @@
   {
     "id": 5,
     "title": "Organisation mondiale de la solidarité",
-    "image": "oms.png",
+    "image": "oms-thumbnail.webp",
     "tags": ["WordPress", "Elementor"],
     "link": "/oms"
   }
