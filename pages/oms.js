@@ -1,17 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import Main from "../layouts/main";
 import Section from "../layouts/section";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 export default function Oms() {
-  const [fullscreen, setFullScreen] = useState(false);
-
-  function disableScroll() {}
-
   return (
     <>
       <Head>
@@ -25,13 +20,6 @@ export default function Oms() {
       </Head>
       <Main>
         <Section>
-          <div
-            className={
-              fullscreen
-                ? "fixed top-0 right-0 bottom-0 left-0 bg-gray-700 opacity-50 z-20"
-                : "hidden"
-            }
-          />
           <h1 className="uppercase tracking-wider text-4xl text-redMain font-medium mb-24 lg:w-2/3 lg:text-6xl">
             Organisation mondiale de la solidarité
           </h1>
