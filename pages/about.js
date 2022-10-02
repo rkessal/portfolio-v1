@@ -2,24 +2,24 @@ import Head from "next/head";
 import Image from "next/image";
 import Main from "../layouts/main";
 import Section from "../layouts/section";
+import Link from "next/link";
 import profilePic from "../assets/profile-pic.jpg";
 import futsalPic from "../assets/futsal-pic.jpg";
 import sfbLogo from "../assets/sfb-logo.png";
+import BackToHome from "../components/backToHome";
+import { useRouter } from "next/router";
 
 export default function About() {
+  const router = useRouter();
   return (
     <>
       <Head>
         <title>A propos</title>
         <meta name="description" content="Errká's Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
-      <Main>
+      <Main router={router.asPath}>
         <Section>
+          <BackToHome />
           <h1 className="uppercase tracking-wider text-4xl text-redMain font-medium mb-24 lg:w-2/3 lg:text-6xl">
             Qui suis-je ?
           </h1>
@@ -58,9 +58,19 @@ export default function About() {
                   Je fais du foot depuis mes 6 ans, j&apos;ai passé la majorité
                   de mon enfance à l&apos;ASPTT Besançon. J&apos;ai joué ensuite
                   au PSB, ou nous avons été promu en R1, et par la suite fini
-                  champion. Je fais maintenant du futsal, au Sporting Futsal de
-                  Besançon, nous sommes dans le top 10 en france au niveau du
-                  nombre de licenciés.
+                  champion. Je fais maintenant du futsal, au{" "}
+                  <Link
+                    href="https://www.instagram.com/sportingfutsalbesancon/?hl=en"
+                    aria-label="sporting futsal besancon"
+                  >
+                    <a>
+                      <span className="underline">
+                        Sporting Futsal de Besançon
+                      </span>
+                    </a>
+                  </Link>
+                  , nous sommes dans le top 10 en France au niveau du nombre de
+                  licenciés.
                 </p>
               </div>
             </div>

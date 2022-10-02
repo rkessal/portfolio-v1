@@ -4,13 +4,12 @@ import Tag from "./tag";
 
 export default function Project({ id, link, src, label, tags }) {
   let toTheLeft = id % 2 === 0 ? true : false;
-  console.log(id);
   return (
     <article
       className={`space-y-6 lg:max-w-5xl${toTheLeft ? "" : " lg:ml-auto"}`}
     >
       <div className="shadow-lg rounded-xl overflow-hidden relative bg-gray-200  hover:cursor-pointer group">
-        <Link href={link}>
+        <Link href={link} scroll={false}>
           <Image
             src={`/${src}`}
             width={1920}

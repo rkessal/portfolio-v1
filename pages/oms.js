@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,21 +6,20 @@ import Main from "../layouts/main";
 import Section from "../layouts/section";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import BackToHome from "../components/backToHome";
 
 export default function Oms() {
+  const router = useRouter();
+
   return (
     <>
       <Head>
         <title>OMS</title>
         <meta name="description" content="OMS Project" />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
-      <Main>
+      <Main router={router.asPath}>
         <Section>
+          <BackToHome />
           <h1 className="uppercase tracking-wider text-4xl text-redMain font-medium mb-24 lg:w-2/3 lg:text-6xl">
             Organisation mondiale de la solidarité
           </h1>
