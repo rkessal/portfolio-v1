@@ -15,7 +15,7 @@ export default function Navbar() {
         <NavbarItem label="about" link="/about">
           A propos
         </NavbarItem>
-        <NavbarItem label="contact" link="#contact">
+        <NavbarItem label="contact" link="mailto:hello@errka.dev">
           Contact
         </NavbarItem>
       </div>
