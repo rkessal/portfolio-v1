@@ -26,7 +26,7 @@ export default function ProjectShowcase({
               Stack
             </h3>
             {stack.map((lang) => (
-              <span>{lang}</span>
+              <span key={stack.indexOf(lang)}>{lang}</span>
             ))}
           </div>
           <div className="flex flex-col">
@@ -34,7 +34,7 @@ export default function ProjectShowcase({
               Liens
             </h3>
             {links.map((link) => (
-              <>
+              <div key={link}>
                 {link.site && (
                   <Link href={link.site}>
                     <a className="flex flex-row items-center space-x-3 group">
@@ -51,7 +51,7 @@ export default function ProjectShowcase({
                     </a>
                   </Link>
                 )}
-              </>
+              </div>
             ))}
           </div>
         </div>

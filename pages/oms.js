@@ -8,6 +8,7 @@ import Project from "../layouts/project";
 
 export default function Oms() {
   const project = {
+    id: 5,
     title: "Organisation Mondiale de la solidarité",
     desc: "L'organisation mondiale de la solidarité est une association située à Besançon dans l'Est de la France et qui a pour but de récolter des dons et aider les personnes dans le besoin.",
     stack: ["Wordpress", "Elementor"],
@@ -23,6 +24,7 @@ export default function Oms() {
           desc={project.desc}
           stack={project.stack}
           links={project.links}
+          key={project.id}
         >
           <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 ">
             <Zoom>

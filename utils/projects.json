@@ -4,28 +4,28 @@
     "title": "Crous Auto (en cours)",
     "image": "manage.png",
     "tags": ["PHP", "Javascript", "SQL"],
-    "link": "/crous-auto"
+    "link": "#"
   },
   {
     "id": 1,
     "title": "Crous Reservation Salle (en cours)",
     "image": "manage.png",
     "tags": ["PHP", "Javascript", "SQL"],
-    "link": "/crous-reservation-salle"
+    "link": "#"
   },
   {
     "id": 2,
     "title": "Hulu Clone (en cours)",
     "image": "hulu-clone.png",
     "tags": ["NextJS", "Tailwind"],
-    "link": "/hulu-clone"
+    "link": "#"
   },
   {
     "id": 3,
     "title": "Manage (en cours)",
     "image": "manage.png",
     "tags": ["ReactJS", "Tailwind"],
-    "link": "/manage"
+    "link": "#"
   },
   {
     "id": 4,
