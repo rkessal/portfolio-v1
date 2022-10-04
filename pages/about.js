@@ -6,8 +6,17 @@ import Link from "next/link";
 import profilePic from "../assets/profile-pic.jpg";
 import futsalPic from "../assets/futsal-pic.jpg";
 import sfbLogo from "../assets/sfb-logo.png";
+import logoLGBM from "../assets/logo-logegbm.jpg";
+import logo from "../assets/logo.svg";
+import logoGBM from "../assets/logo-gbm.svg";
+import logoCrous from "../assets/logo-crous.png";
+import logoYt from "../assets/logo-yt.png";
+import logoPergaud from "../assets/logo-pergaud.bmp";
+import logoIUTBM from "../assets/logo-iutbm.jpg";
+import logoJulesHaag from "../assets/logo-juleshaag.png";
 import BackToHome from "../components/backToHome";
 import { useRouter } from "next/router";
+import Position from "../components/position";
 
 export default function About() {
   const router = useRouter();
@@ -20,7 +29,7 @@ export default function About() {
       <Main router={router.asPath}>
         <Section>
           <BackToHome />
-          <h1 className="uppercase tracking-wider text-4xl text-redMain font-medium mb-24 lg:w-2/3 lg:text-6xl">
+          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12  md:text-left lg:w-2/3 lg:text-6xl">
             Qui suis-je ?
           </h1>
           <div className="flex flex-col items-center space-y-16 md:items-start">
@@ -35,9 +44,12 @@ export default function About() {
                 graphique et j&apos;ai mis mes mains sur Photoshop à l&apos;age
                 de 13 ans. J&apos;ai commencé en faisant des bannières et des
                 logos, puis j&apos;ai ouvert une chaine sur YouTube ou je
-                postais des &quot;SpeedArts&quot;. Je me suis orienté ensuite
-                vers la programmation et j&apos;ai obtenu mon bac +3 dans le
-                développement web et mobile.
+                postais des{" "}
+                <Link href="https://www.youtube.com/user/PozenGFX">
+                  <a className="underline">&quot;SpeedArts&quot;</a>
+                </Link>
+                . Je me suis orienté ensuite vers la programmation et j&apos;ai
+                obtenu mon bac +3 dans le développement web et mobile.
               </p>
             </div>
             <div className="flex flex-col items-center space-y-8 w-full text-center md:flex-row-reverse md:max-w-4xl md:text-right">
@@ -76,6 +88,75 @@ export default function About() {
             </div>
           </div>
         </Section>
+        <div className="flex flex-col lg:flex-row lg:space-x-32">
+          <Section>
+            <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
+              Experience
+            </h1>
+            <div className="flex flex-col space-y-6">
+              <Position title="Développeur Web" company="Freelance" date="2022">
+                <Image src={logo} height={70} width={70} alt="logo" />
+              </Position>
+
+              <Position
+                title="Technicien Informatique"
+                company="Loge.GBM"
+                date="Jan. 2022 - Octobre 2022"
+              >
+                <Image src={logoLGBM} height={38} width={70} alt="logo" />
+              </Position>
+              <Position
+                title="Développeur Web/Mobile"
+                company="Grand Besancon Métropole"
+                date="Mars 2022 - Juin 2022"
+              >
+                <Image src={logoGBM} height={70} width={70} alt="logo" />
+              </Position>
+              <Position
+                title="Développeur Web"
+                company="Crous BFC"
+                date="Fev 2019 – Avril 2019, Juin 2018"
+              >
+                <Image src={logoCrous} height={70} width={70} alt="logo" />
+              </Position>
+              <Position
+                title="Designer Graphique"
+                company="Freelance"
+                date="2012 - 2014"
+              >
+                <Image src={logoYt} height={70} width={70} alt="logo" />
+              </Position>
+            </div>
+          </Section>
+          <Section>
+            <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
+              Education
+            </h1>
+            <div className="flex flex-col space-y-6">
+              <Position
+                title="Licence Professionnelle - Mobilité Numérique"
+                company="IUT Belfort-Montbéliard"
+                date="2020"
+              >
+                <Image src={logoIUTBM} height={80} width={70} alt="logo" />
+              </Position>
+              <Position
+                title="BTS - Services Informatiques aux Organisations"
+                company="Lycée Louis Pergaud"
+                date="2019"
+              >
+                <Image src={logoPergaud} height={62} width={70} alt="logo" />
+              </Position>
+              <Position
+                title="Baccalauréat - STI2D"
+                company="Lycée Jules Haag"
+                date="2018"
+              >
+                <Image src={logoJulesHaag} height={30} width={70} alt="logo" />
+              </Position>
+            </div>
+          </Section>
+        </div>
       </Main>
     </>
   );
