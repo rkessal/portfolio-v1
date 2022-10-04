@@ -29,8 +29,8 @@
   },
   {
     "id": 4,
-    "title": "EasyBank (en cours)",
-    "image": "easy-bank.png",
+    "title": "EasyBank",
+    "image": "easybank-thumbnail.webp",
     "tags": ["NextJS", "ChakraUI"],
     "link": "/easybank"
   },

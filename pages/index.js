@@ -18,10 +18,7 @@ export default function Home() {
       </Head>
       <Main>
         <Navbar />
-        <Hero>
-          Je travaille la conception, le design et le développement de vos
-          produits digitaux.
-        </Hero>
+        <Hero />
         <Projects data={data} error={error} />
         <Footer />
       </Main>

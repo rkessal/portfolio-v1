@@ -88,7 +88,7 @@ export default function About() {
             </div>
           </div>
         </Section>
-        <div className="flex flex-col lg:flex-row lg:space-x-32">
+        <div className="flex flex-col lg:flex-row lg:space-x-28">
           <Section>
             <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
               Experience
