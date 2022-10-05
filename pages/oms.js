@@ -17,8 +17,8 @@ export default function Oms() {
 
   return (
     <Project title="OMS" desc="Projet Organisation mondiale de la solidarité">
+      <BackToHome />
       <Section>
-        <BackToHome />
         <ProjectShowcase
           title={project.title}
           desc={project.desc}

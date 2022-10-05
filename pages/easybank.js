@@ -21,8 +21,8 @@ export default function Easybank() {
 
   return (
     <Project title="Easybank" desc="Projet Easybank">
+      <BackToHome />
       <Section>
-        <BackToHome />
         <ProjectShowcase
           title={project.title}
           desc={project.desc}

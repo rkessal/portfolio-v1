@@ -14,22 +14,24 @@ export default function ProjectShowcase({
         {title}
       </h1>
       <div className="space-y-8">
-        <div className="lg:w-4/5 xl:w-3/5">
+        <div className="space-y-4 lg:w-4/5 xl:w-3/5">
           <h3 className="text-xl font-medium uppercase tracking-wider ">
             Description
           </h3>
-          <p>{desc}</p>
+          <p className="leading-loose">{desc}</p>
         </div>
         <div className="flex flex-row space-x-24 ">
-          <div className="flex flex-col">
+          <div className="flex flex-col space-y-4">
             <h3 className="text-xl font-medium uppercase tracking-wider">
               Stack
             </h3>
-            {stack.map((lang) => (
-              <span key={stack.indexOf(lang)}>{lang}</span>
-            ))}
+            <div className="flex flex-col">
+              {stack.map((lang) => (
+                <span key={stack.indexOf(lang)}>{lang}</span>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col space-y-4">
             <h3 className="text-xl font-medium uppercase tracking-wider">
               Liens
             </h3>

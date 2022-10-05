@@ -1,3 +1,3 @@
 export default function Section({ children }) {
-  return <section className="py-8">{children}</section>;
+  return <section className="py-16">{children}</section>;
 }

@@ -27,24 +27,27 @@ export default function About() {
         <meta name="description" content="Errká's Portfolio" />
       </Head>
       <Main router={router.asPath}>
+        <BackToHome />
         <Section>
-          <BackToHome />
-          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12  md:text-left lg:w-2/3 lg:text-6xl">
+          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-6xl">
             Qui suis-je ?
           </h1>
-          <div className="flex flex-col items-center space-y-16 md:items-start">
-            <div className="flex flex-col items-center space-y-8 text-center md:text-left md:space-y-0 md:space-x-20 md:flex-row ">
-              <div className="relative rounded-full overflow-hidden h-60 w-60 md:rounded-md md:h-64">
-                <Image src={profilePic} layout="fill" objectFit="cover" />
-              </div>
-              <p className="md:max-w-md">
-                Je m&apos;appelle Rayhan et je suis développeur web/mobile,
-                originaire de Besançon qui se situe dans la magnifique région de
-                Franche-Comté. J&apos;ai toujours été passionné par le design
-                graphique et j&apos;ai mis mes mains sur Photoshop à l&apos;age
-                de 13 ans. J&apos;ai commencé en faisant des bannières et des
-                logos, puis j&apos;ai ouvert une chaine sur YouTube ou je
-                postais des{" "}
+          <div className="flex flex-col items-center space-y-6 text-justify md:text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
+            <div className="relative rounded-full overflow-hidden h-60 w-60 md:self-start md:rounded-md md:h-96 md:w-96">
+              <Image src={profilePic} layout="fill" objectFit="cover" />
+            </div>
+            <div className="flex flex-col space-y-2">
+              <h2 className="hidden text-4xl font-medium lg:block">
+                Je m&apos;appelle Rayhan
+              </h2>
+              <p className="lg:max-w-lg xl:max-w-xl leading-loose">
+                <span className="lg:hidden">Je m&apos;appelle Rayhan </span> et
+                je suis développeur web/mobile, originaire de Besançon qui se
+                situe dans la magnifique région de Franche-Comté. J&apos;ai
+                toujours été passionné par le design graphique et j&apos;ai mis
+                mes mains sur Photoshop à l&apos;age de 13 ans. J&apos;ai
+                commencé en faisant des bannières et des logos, puis j&apos;ai
+                ouvert une chaine sur YouTube ou je postais des{" "}
                 <Link href="https://www.youtube.com/user/PozenGFX">
                   <a className="underline">&quot;SpeedArts&quot;</a>
                 </Link>
@@ -52,39 +55,41 @@ export default function About() {
                 obtenu mon bac +3 dans le développement web et mobile.
               </p>
             </div>
-            <div className="flex flex-col items-center space-y-8 w-full text-center md:flex-row-reverse md:max-w-4xl md:text-right">
-              <div className="relative w-full h-80 rounded-md overflow-hidden md:w-1/2 md:ml-20">
-                <Image
-                  className="scale-125"
-                  src={futsalPic}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="top"
-                />
+          </div>
+        </Section>
+        <Section>
+          <div className="flex flex-col items-center space-y-8 w-full text-justify lg:flex-row-reverse lg:max-w-4xl md:text-left lg:text-right lg:items-end">
+            <div className="relative w-full h-80 rounded-md overflow-hidden lg:w-96 lg:h-96 md:ml-20 md:self-end">
+              <Image
+                src={futsalPic}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="top"
+              />
+            </div>
+
+            <div className="flex flex-col space-y-2">
+              <div className="hidden lg:block">
+                <Image src={sfbLogo} height={80} width={80} />
               </div>
-              <div className="flex flex-col space-y-2">
-                <div>
-                  <Image src={sfbLogo} height={80} width={80} />
-                </div>
-                <p className="md:max-w-md">
-                  Je fais du foot depuis mes 6 ans, j&apos;ai passé la majorité
-                  de mon enfance à l&apos;ASPTT Besançon. J&apos;ai joué ensuite
-                  au PSB, ou nous avons été promu en R1, et par la suite fini
-                  champion. Je fais maintenant du futsal, au{" "}
-                  <Link
-                    href="https://www.instagram.com/sportingfutsalbesancon/?hl=en"
-                    aria-label="sporting futsal besancon"
-                  >
-                    <a>
-                      <span className="underline">
-                        Sporting Futsal de Besançon
-                      </span>
-                    </a>
-                  </Link>
-                  , nous sommes dans le top 10 en France au niveau du nombre de
-                  licenciés.
-                </p>
-              </div>
+              <p className="lg:max-w-lg xl:max-w-xl leading-loose">
+                Je fais du foot depuis mes 6 ans, j&apos;ai passé la majorité de
+                mon enfance à l&apos;ASPTT Besançon. J&apos;ai joué ensuite au
+                PSB, ou nous avons été promu en R1, et par la suite fini
+                champion. Je fais maintenant du futsal, au{" "}
+                <Link
+                  href="https://www.instagram.com/sportingfutsalbesancon/?hl=en"
+                  aria-label="sporting futsal besancon"
+                >
+                  <a>
+                    <span className="underline">
+                      Sporting Futsal de Besançon
+                    </span>
+                  </a>
+                </Link>
+                , nous sommes dans le top 10 en France au niveau du nombre de
+                licenciés.
+              </p>
             </div>
           </div>
         </Section>
@@ -101,7 +106,7 @@ export default function About() {
               <Position
                 title="Technicien Informatique"
                 company="Loge.GBM"
-                date="Jan. 2022 - Octobre 2022"
+                date="Jan. 2022 - Oct. 2022"
               >
                 <Image src={logoLGBM} height={38} width={70} alt="logo" />
               </Position>
@@ -115,7 +120,7 @@ export default function About() {
               <Position
                 title="Développeur Web"
                 company="Crous BFC"
-                date="Fev 2019 – Avril 2019, Juin 2018"
+                date="Fév. 2019 – Avril 2019, Juin 2018"
               >
                 <Image src={logoCrous} height={70} width={70} alt="logo" />
               </Position>
