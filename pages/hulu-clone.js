@@ -9,7 +9,7 @@ export default function HuluClone() {
   const project = {
     id: 5,
     title: "Hulu Clone",
-    desc: "Ce projet est un clone de la page d'accueil du site de streaming américain Hulu. Les images et les détails des films sont récupérés avec l'API de TMDB (The Movie Data Base). J'ai appris à utiliser les querys du router de NextJS pour afficher les films selon leur catégorie. J'ai utilisé le framework Tailwind pour le CSS.",
+    desc: "Ce projet est un clone de la page d'accueil du site de streaming américain Hulu. Les images et les détails des films sont récupérés avec l'API de TMDB (The Movie Data Base). J'ai appris à utiliser les queries du router de NextJS pour afficher les films selon leur catégorie. J'ai utilisé le framework Tailwind pour le CSS.",
     stack: ["NextJS", "TailwindCSS"],
     links: [
       {
