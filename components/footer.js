@@ -10,16 +10,13 @@ export default function Footer() {
       </a>
       <h3>Besancon, FR</h3>
       <div className="flex flex-row space-x-2">
-        <Link href="https://github.com/rkessal" aria-label="github">
-          <a>
+        <Link href="https://github.com/rkessal">
+          <a aria-label="github">
             <AiFillGithub size={30} color="#630000" />
           </a>
         </Link>
-        <Link
-          href="https://www.linkedin.com/in/rayhan-kessal/"
-          aria-label="linkedin"
-        >
-          <a>
+        <Link href="https://www.linkedin.com/in/rayhan-kessal/">
+          <a aria-label="linkedin">
             <AiFillLinkedin size={30} color="#630000" />
           </a>
         </Link>
