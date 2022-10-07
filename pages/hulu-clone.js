@@ -1,22 +1,25 @@
-import Image from "next/image";
-import Section from "../layouts/section";
-import Zoom from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
-import BackToHome from "../components/backToHome";
 import ProjectShowcase from "../components/projectShowcase";
 import Project from "../layouts/project";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+import Image from "next/image";
+import Section from "../layouts/section";
 
-export default function Oms() {
+export default function HuluClone() {
   const project = {
     id: 5,
-    title: "Organisation Mondiale de la solidarité",
-    desc: "L'organisation mondiale de la solidarité est une association située à Besançon dans l'Est de la France et qui a pour but de récolter des dons et aider les personnes dans le besoin.",
-    stack: ["Wordpress", "Elementor"],
-    links: [{ site: "http://organisationmondialedelasolidarite.com/" }],
+    title: "Hulu Clone",
+    desc: "Ce projet est un clone de la page d'accueil du site de streaming américain Hulu. Les images et les détails des films sont récupérés avec l'API de TMDB (The Movie Data Base). J'ai appris à utiliser les querys du router de NextJS pour afficher les films selon leur catégorie. J'ai utilisé le framework Tailwind pour le CSS.",
+    stack: ["NextJS", "TailwindCSS"],
+    links: [
+      {
+        site: "https://hulu-clone-rkessal.vercel.app",
+        repo: "https://github.com/rkessal/hulu-clone",
+      },
+    ],
   };
-
   return (
-    <Project title="OMS" desc="Projet Organisation mondiale de la solidarité">
+    <Project title="Hulu Clone" desc="Projet Hulu Clone">
       <Section>
         <ProjectShowcase
           title={project.title}
@@ -28,40 +31,40 @@ export default function Oms() {
           <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 ">
             <Zoom>
               <Image
-                src="/oms.png"
+                src="/hulu.png"
                 layout="responsive"
-                width={1920}
-                height={887}
+                width={1820}
+                height={965}
               />
             </Zoom>
           </div>
           <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
             <Zoom>
               <Image
-                src="/oms-mobile.png"
+                src="/hulu-mobile.png"
                 layout="responsive"
-                width={450}
-                height={887}
+                width={437}
+                height={965}
               />
             </Zoom>
           </div>
           <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 md:order-2">
             <Zoom>
               <Image
-                src="/oms-2.png"
+                src="/hulu-2.png"
                 layout="responsive"
-                width={1920}
-                height={887}
+                width={1820}
+                height={965}
               />
             </Zoom>
           </div>
           <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
             <Zoom>
               <Image
-                src="/oms-2-mobile.png"
+                src="/hulu-2-mobile.png"
                 layout="responsive"
-                width={450}
-                height={887}
+                width={437}
+                height={965}
               />
             </Zoom>
           </div>

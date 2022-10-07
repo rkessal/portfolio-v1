@@ -8,16 +8,16 @@ export default function Project({ id, link, src, label, tags }) {
     <article
       className={`space-y-6 lg:max-w-5xl${toTheLeft ? "" : " lg:ml-auto"}`}
     >
-      <div className="shadow-lg rounded-xl overflow-hidden relative bg-gray-200  hover:cursor-pointer group">
+      <div className="shadow-xl rounded-xl overflow-hidden relative bg-gray-100  hover:cursor-pointer group">
         <Link href={link} scroll={false}>
           <Image
             src={`/${src}`}
-            width={1920}
-            height={1080}
+            width={1280}
+            height={720}
             alt={label}
             layout="responsive"
-            objectFit="cover"
-            className="group-hover:scale-105 ease-in-out duration-100"
+            objectFit="contain"
+            className="scale-50 group-hover:scale-[65%] ease-[cubic-bezier(0.6,0.01,-0.05,0.9)] duration-100"
           />
         </Link>
         <div className="absolute bottom-0 left-0 flex flex-col ml-5 mb-5">

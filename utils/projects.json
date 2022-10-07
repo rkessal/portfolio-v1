@@ -15,29 +15,29 @@
   },
   {
     "id": 2,
-    "title": "Hulu Clone (en cours)",
-    "image": "hulu-clone.png",
+    "title": "Hulu Clone",
+    "image": "hulu-logo.svg",
     "tags": ["NextJS", "Tailwind"],
-    "link": "#"
+    "link": "/hulu-clone"
   },
   {
     "id": 3,
     "title": "Manage",
-    "image": "manage-thumbnail.webp",
+    "image": "manage-logo.svg",
     "tags": ["ReactJS", "Tailwind"],
     "link": "/manage"
   },
   {
     "id": 4,
     "title": "EasyBank",
-    "image": "easybank-thumbnail.webp",
+    "image": "easybank-logo.svg",
     "tags": ["NextJS", "ChakraUI"],
     "link": "/easybank"
   },
   {
     "id": 5,
     "title": "Organisation mondiale de la solidarité",
-    "image": "oms-thumbnail.webp",
+    "image": "oms-logo.png",
     "tags": ["WordPress", "Elementor"],
     "link": "/oms"
   }

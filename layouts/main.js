@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-function Main({ router, children }) {
+import BackToHome from "../components/backToHome";
+function Main({ router, children, home }) {
   console.log(router);
   const variants = {
     hidden: {
@@ -23,7 +24,9 @@ function Main({ router, children }) {
       transition={{ type: "linear", duration: 0.4 }}
       className="container mx-auto px-5 font-Poppins"
     >
+      {!home && <BackToHome />}
       {children}
+      {!home && <BackToHome />}
     </motion.div>
   );
 }

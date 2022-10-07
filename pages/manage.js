@@ -22,7 +22,6 @@ export default function Manage() {
 
   return (
     <Project title="Manage" desc="Projet Manage">
-      <BackToHome />
       <Section>
         <ProjectShowcase
           title={project.title}

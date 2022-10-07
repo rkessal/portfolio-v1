@@ -27,12 +27,11 @@ export default function About() {
         <meta name="description" content="Errká's Portfolio" />
       </Head>
       <Main router={router.asPath}>
-        <BackToHome />
         <Section>
           <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-6xl">
             Qui suis-je ?
           </h1>
-          <div className="flex flex-col items-center space-y-6 text-justify md:text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
+          <div className="flex flex-col items-center space-y-6 text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
             <div className="relative rounded-full overflow-hidden h-60 w-60 md:self-start md:rounded-md md:h-96 md:w-96">
               <Image src={profilePic} layout="fill" objectFit="cover" />
             </div>
@@ -42,12 +41,16 @@ export default function About() {
               </h2>
               <p className="lg:max-w-lg xl:max-w-xl leading-loose">
                 <span className="lg:hidden">Je m&apos;appelle Rayhan </span> et
-                je suis développeur web/mobile, originaire de Besançon qui se
-                situe dans la magnifique région de Franche-Comté. J&apos;ai
-                toujours été passionné par le design graphique et j&apos;ai mis
-                mes mains sur Photoshop à l&apos;age de 13 ans. J&apos;ai
-                commencé en faisant des bannières et des logos, puis j&apos;ai
-                ouvert une chaine sur YouTube ou je postais des{" "}
+                je suis{" "}
+                <span className="font-medium text-redMain">
+                  développeur web/mobile
+                </span>
+                , originaire de Besançon qui se situe dans la magnifique région
+                de Franche-Comté. J&apos;ai toujours été passionné par le design
+                graphique et j&apos;ai mis mes mains sur Photoshop à l&apos;age
+                de 13 ans. J&apos;ai commencé en faisant des bannières et des
+                logos, puis j&apos;ai ouvert une chaine sur YouTube ou je
+                postais des{" "}
                 <Link href="https://www.youtube.com/user/PozenGFX">
                   <a className="underline">&quot;SpeedArts&quot;</a>
                 </Link>
@@ -58,8 +61,11 @@ export default function About() {
           </div>
         </Section>
         <Section>
-          <div className="flex flex-col items-center space-y-8 w-full text-justify lg:flex-row-reverse lg:max-w-4xl md:text-left lg:text-right lg:items-end">
-            <div className="relative w-full h-80 rounded-md overflow-hidden lg:w-96 lg:h-96 md:ml-20 md:self-end">
+          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
+            En dehors du travail
+          </h1>
+          <div className="flex flex-col items-center space-y-6 text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
+            <div className="relative w-full h-80 rounded-md overflow-hidden lg:w-96 lg:h-96 md:self-end">
               <Image
                 src={futsalPic}
                 layout="fill"
@@ -93,75 +99,73 @@ export default function About() {
             </div>
           </div>
         </Section>
-        <div className="flex flex-col lg:flex-row lg:space-x-28">
-          <Section>
-            <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
-              Experience
-            </h1>
-            <div className="flex flex-col space-y-6">
-              <Position title="Développeur Web" company="Freelance" date="2022">
-                <Image src={logo} height={70} width={70} alt="logo" />
-              </Position>
+        <Section>
+          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
+            Experience
+          </h1>
+          <div className="flex flex-col space-y-6">
+            <Position title="Développeur Web" company="Freelance" date="2022">
+              <Image src={logo} height={70} width={70} alt="logo" />
+            </Position>
 
-              <Position
-                title="Technicien Informatique"
-                company="Loge.GBM"
-                date="Jan. 2022 - Oct. 2022"
-              >
-                <Image src={logoLGBM} height={38} width={70} alt="logo" />
-              </Position>
-              <Position
-                title="Développeur Web/Mobile"
-                company="Grand Besancon Métropole"
-                date="Mars 2022 - Juin 2022"
-              >
-                <Image src={logoGBM} height={70} width={70} alt="logo" />
-              </Position>
-              <Position
-                title="Développeur Web"
-                company="Crous BFC"
-                date="Fév. 2019 – Avril 2019, Juin 2018"
-              >
-                <Image src={logoCrous} height={70} width={70} alt="logo" />
-              </Position>
-              <Position
-                title="Designer Graphique"
-                company="Freelance"
-                date="2012 - 2014"
-              >
-                <Image src={logoYt} height={70} width={70} alt="logo" />
-              </Position>
-            </div>
-          </Section>
-          <Section>
-            <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
-              Education
-            </h1>
-            <div className="flex flex-col space-y-6">
-              <Position
-                title="Licence Professionnelle - Mobilité Numérique"
-                company="IUT Belfort-Montbéliard"
-                date="2020"
-              >
-                <Image src={logoIUTBM} height={80} width={70} alt="logo" />
-              </Position>
-              <Position
-                title="BTS - Services Informatiques aux Organisations"
-                company="Lycée Louis Pergaud"
-                date="2019"
-              >
-                <Image src={logoPergaud} height={62} width={70} alt="logo" />
-              </Position>
-              <Position
-                title="Baccalauréat - STI2D"
-                company="Lycée Jules Haag"
-                date="2018"
-              >
-                <Image src={logoJulesHaag} height={30} width={70} alt="logo" />
-              </Position>
-            </div>
-          </Section>
-        </div>
+            <Position
+              title="Technicien Informatique"
+              company="Loge.GBM"
+              date="Jan. 2022 - Oct. 2022"
+            >
+              <Image src={logoLGBM} height={38} width={70} alt="logo" />
+            </Position>
+            <Position
+              title="Développeur Web/Mobile"
+              company="Grand Besancon Métropole"
+              date="Mars 2022 - Juin 2022"
+            >
+              <Image src={logoGBM} height={70} width={70} alt="logo" />
+            </Position>
+            <Position
+              title="Développeur Web"
+              company="Crous BFC"
+              date="Fév. 2019 – Avril 2019, Juin 2018"
+            >
+              <Image src={logoCrous} height={70} width={70} alt="logo" />
+            </Position>
+            <Position
+              title="Designer Graphique"
+              company="Freelance"
+              date="2012 - 2014"
+            >
+              <Image src={logoYt} height={70} width={70} alt="logo" />
+            </Position>
+          </div>
+        </Section>
+        <Section>
+          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
+            Education
+          </h1>
+          <div className="flex flex-col space-y-6">
+            <Position
+              title="Licence Professionnelle - Mobilité Numérique"
+              company="IUT Belfort-Montbéliard"
+              date="2020"
+            >
+              <Image src={logoIUTBM} height={80} width={70} alt="logo" />
+            </Position>
+            <Position
+              title="BTS - Services Informatiques aux Organisations"
+              company="Lycée Louis Pergaud"
+              date="2019"
+            >
+              <Image src={logoPergaud} height={62} width={70} alt="logo" />
+            </Position>
+            <Position
+              title="Baccalauréat - STI2D"
+              company="Lycée Jules Haag"
+              date="2018"
+            >
+              <Image src={logoJulesHaag} height={30} width={70} alt="logo" />
+            </Position>
+          </div>
+        </Section>
       </Main>
     </>
   );

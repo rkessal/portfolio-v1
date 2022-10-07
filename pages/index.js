@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="description" content="Errká's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main>
+      <Main home={true}>
         <Navbar />
         <Hero />
         <Projects data={data} error={error} />
