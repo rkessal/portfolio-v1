@@ -10,60 +10,74 @@ export default function ProjectShowcase({
 }) {
   return (
     <>
-      <h1 className="uppercase tracking-wider text-4xl text-redMain font-medium mb-24 lg:w-2/3 lg:text-6xl">
+      <h1 className="text-5xl leading-tight text-redMain mb-8 md:leading-tight md:text-6xl lg:text-7xl lg:leading-tight lg:max-w-7xl lg:mb-12 2xl:leading-tight 2xl:text-8xl">
         {title}
       </h1>
-      <div className="space-y-8">
-        <div className="space-y-4 lg:w-4/5 xl:w-3/5">
-          <h3 className="text-xl font-medium uppercase tracking-wider ">
-            Description
-          </h3>
-          <p className="leading-loose">{desc}</p>
-        </div>
-        <div className="flex flex-row space-x-24 ">
-          <div className="flex flex-col space-y-4">
-            <h3 className="text-xl font-medium uppercase tracking-wider">
+      <div className="flex flex-col space-y-6 lg:space-y-0 lg:flex-row">
+        <div className="flex flex-col mt-20 w-full space-y-10 order-2 lg:space-y-12 lg:max-w-xs lg:mt-0 lg:h-full xl:max-w-sm lg:sticky lg:top-16">
+          <div className="space-y-3">
+            <h2 className="text-xl font-medium uppercase tracking-wider">
               Stack
-            </h3>
-            <div className="flex flex-col">
-              {stack.map((lang) => (
-                <span key={stack.indexOf(lang)}>{lang}</span>
+            </h2>
+            <div className="flex flex-col space-y-1">
+              {stack.map((tech) => (
+                <span key={stack.indexOf(tech)}>{tech}</span>
               ))}
             </div>
           </div>
-          <div className="flex flex-col space-y-4">
-            <h3 className="text-xl font-medium uppercase tracking-wider">
+          <div className="space-y-3">
+            <h2 className="text-xl font-medium uppercase tracking-wider">
               Liens
-            </h3>
-            {links.map((link) => (
-              <div key={link}>
-                {link.site && (
-                  <Link href={link.site}>
-                    <a className="flex flex-row items-center space-x-3 group">
-                      <span className="group-hover:underline">Site</span>
-                      <FiExternalLink className="mb-[3px] group-hover:rotate-6" />
-                    </a>
-                  </Link>
-                )}
-                {link.repo && (
-                  <Link href={link.repo}>
-                    <a className="flex flex-row items-center space-x-3 group">
-                      <span className="group-hover:underline">Repo</span>
-                      <FiExternalLink className="mb-[3px] group-hover:rotate-6" />
-                    </a>
-                  </Link>
-                )}
-              </div>
-            ))}
+            </h2>
+            <div className="flex flex-col space-y-1">
+              {links.map((link) => (
+                <div key={link}>
+                  {link.site && (
+                    <Link href={link.site}>
+                      <a className="flex flex-row items-center space-x-3 group">
+                        <span className="group-hover:underline">Site</span>
+
+                        <svg
+                          class="w-5 h-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </a>
+                    </Link>
+                  )}
+                  {link.repo && (
+                    <Link href={link.repo}>
+                      <a className="flex flex-row items-center space-x-3 group">
+                        <span className="group-hover:underline">Repo</span>
+                        <svg
+                          class="w-5 h-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </a>
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div>
-          <h3 className="text-xl font-medium uppercase tracking-wider">
-            Images
-          </h3>
-          <div className="flex flex-col grid-cols-5 auto-rows-min space-y-3 md:gap-3 md:space-y-0 md:grid ">
-            {children}
-          </div>
+        <div className="space-y-20 lg:order-3">
+          <p className="text-2xl h-[50vh]  leading-normal lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
+            {desc}
+          </p>
+
+          <div className="w-full space-y-2 lg:space-y-4">{children}</div>
         </div>
       </div>
     </>

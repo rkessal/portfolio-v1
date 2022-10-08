@@ -28,65 +28,67 @@ export default function Easybank() {
           stack={project.stack}
           links={project.links}
         >
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 ">
+          <div className="px-8 pt-8 overflow-hidden rounded-md max-h-256 lg:px-24 lg:pt-24 bg-gradient-to-bl from-gray-100 to-gray-200">
             <Zoom>
               <Image
-                src="/easy-bank.png"
+                src="/easybank.png"
                 layout="responsive"
-                width={1865}
-                height={965}
+                width={1903}
+                height={1323}
               />
             </Zoom>
           </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
-            <Zoom>
-              <Image
-                src="/easybank-mobile.png"
-                layout="responsive"
-                width={437}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 md:order-2">
+          <div className="px-8 pt-8 overflow-hidden rounded-md max-h-256 lg:px-24 lg:pt-24 bg-gradient-to-bl from-gray-100 to-gray-200">
             <Zoom>
               <Image
                 src="/easybank-2.png"
                 layout="responsive"
-                width={1865}
-                height={965}
+                width={1903}
+                height={893}
               />
             </Zoom>
           </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
-            <Zoom>
-              <Image
-                src="/easybank-2-mobile.png"
-                layout="responsive"
-                width={437}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 md:order-4">
-            <Zoom>
-              <Image
-                src="/easybank-3.png"
-                layout="responsive"
-                width={1865}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1 md:order-5">
-            <Zoom>
-              <Image
-                src="/easybank-3-mobile.png"
-                layout="responsive"
-                width={437}
-                height={965}
-              />
-            </Zoom>
+          <div className="grid grid-cols-2 gap-2 lg:gap-4">
+            <div className="px-8 pt-8 bg-gradient-to-bl from-gray-100 to-gray-200 overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
+              <Zoom>
+                <Image
+                  src="/easybank-mobile.png"
+                  layout="responsive"
+                  width={437}
+                  height={965}
+                />
+              </Zoom>
+            </div>
+            <div className="px-8 pt-8 bg-gradient-to-bl from-gray-100 to-gray-200 overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
+              <Zoom>
+                <Image
+                  src="/easybank-2-mobile.png"
+                  layout="responsive"
+                  width={437}
+                  height={965}
+                />
+              </Zoom>
+            </div>
+            <div className="px-8 pt-8 bg-gradient-to-bl from-gray-100 to-gray-200 overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
+              <Zoom>
+                <Image
+                  src="/easybank-3-mobile.png"
+                  layout="responsive"
+                  width={437}
+                  height={965}
+                />
+              </Zoom>
+            </div>
+            <div className="px-8 pt-8 bg-gradient-to-bl from-gray-100 to-gray-200 overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
+              <Zoom>
+                <Image
+                  src="/easybank-4-mobile.png"
+                  layout="responsive"
+                  width={437}
+                  height={965}
+                />
+              </Zoom>
+            </div>
           </div>
         </ProjectShowcase>
       </Section>

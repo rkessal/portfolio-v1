@@ -1,19 +1,5 @@
 [
   {
-    "id": 0,
-    "title": "Crous Auto (en cours)",
-    "image": "manage.png",
-    "tags": ["PHP", "Javascript", "SQL"],
-    "link": "#"
-  },
-  {
-    "id": 1,
-    "title": "Crous Reservation Salle (en cours)",
-    "image": "manage.png",
-    "tags": ["PHP", "Javascript", "SQL"],
-    "link": "#"
-  },
-  {
     "id": 2,
     "title": "Hulu Clone",
     "image": "hulu-logo.svg",
