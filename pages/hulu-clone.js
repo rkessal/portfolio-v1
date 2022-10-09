@@ -4,12 +4,18 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
 import Section from "../layouts/section";
+import hulu from "../assets/hulu/hulu.png";
+import hulu2 from "../assets/hulu/hulu-2.png";
+import huluTablet from "../assets/hulu/hulu-tablet.png";
+import huluMobile from "../assets/hulu/hulu-mobile.png";
+import huluMobile2 from "../assets/hulu/hulu-2-mobile.png";
+import ProjectItemShowcase from "../components/projectItemShowcase";
 
 export default function HuluClone() {
   const project = {
     id: 5,
     title: "Hulu Clone",
-    desc: "Ce projet est un clone de la page d'accueil du site de streaming américain Hulu. Les images et les détails des films sont récupérés avec l'API de TMDB (The Movie Data Base). J'ai appris à utiliser les queries du router de NextJS pour afficher les films selon leur catégorie. J'ai utilisé le framework Tailwind pour le CSS.",
+    desc: "Ce projet est un clone de la page d'accueil du site de streaming américain Hulu. Les images et les détails des filmes sont récupérés avec l'API de TMDB (The Movie Data Base). J'ai appris à utiliser les queries du router de NextJS pour afficher les filmes selon leur catégorie. J'ai utilisé le framework Tailwind pour le CSS.",
     stack: ["NextJS", "TailwindCSS"],
     links: [
       {
@@ -28,45 +34,11 @@ export default function HuluClone() {
           links={project.links}
           key={project.id}
         >
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 ">
-            <Zoom>
-              <Image
-                src="/hulu.png"
-                layout="responsive"
-                width={1820}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
-            <Zoom>
-              <Image
-                src="/hulu-mobile.png"
-                layout="responsive"
-                width={437}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 md:order-2">
-            <Zoom>
-              <Image
-                src="/hulu-2.png"
-                layout="responsive"
-                width={1820}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
-            <Zoom>
-              <Image
-                src="/hulu-2-mobile.png"
-                layout="responsive"
-                width={437}
-                height={965}
-              />
-            </Zoom>
+          <ProjectItemShowcase src={hulu} width={1903} height={955} />
+          <ProjectItemShowcase src={hulu2} width={1903} height={965} />
+          <div className="grid grid-cols-2 gap-2 lg:gap-4">
+            <ProjectItemShowcase src={huluMobile} width={437} height={965} />
+            <ProjectItemShowcase src={huluMobile2} width={437} height={965} />
           </div>
         </ProjectShowcase>
       </Section>

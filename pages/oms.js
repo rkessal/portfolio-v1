@@ -1,10 +1,13 @@
-import Image from "next/image";
 import Section from "../layouts/section";
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import BackToHome from "../components/backToHome";
 import ProjectShowcase from "../components/projectShowcase";
 import Project from "../layouts/project";
+import ProjectItemShowcase from "../components/projectItemShowcase";
+import oms from "../assets/oms/oms.png";
+import oms2 from "../assets/oms/oms-2.png";
+import oms3 from "../assets/oms/oms-3.png";
+import omsMobile2 from "../assets/oms/oms-2-mobile.png";
+import omsMobile3 from "../assets/oms/oms-3-mobile.png";
 
 export default function Oms() {
   const project = {
@@ -25,45 +28,12 @@ export default function Oms() {
           links={project.links}
           key={project.id}
         >
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 ">
-            <Zoom>
-              <Image
-                src="/oms.png"
-                layout="responsive"
-                width={1920}
-                height={887}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
-            <Zoom>
-              <Image
-                src="/oms-mobile.png"
-                layout="responsive"
-                width={450}
-                height={887}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 md:order-2">
-            <Zoom>
-              <Image
-                src="/oms-2.png"
-                layout="responsive"
-                width={1920}
-                height={887}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
-            <Zoom>
-              <Image
-                src="/oms-2-mobile.png"
-                layout="responsive"
-                width={450}
-                height={887}
-              />
-            </Zoom>
+          <ProjectItemShowcase src={oms} width={1903} height={1503} />
+          <ProjectItemShowcase src={oms2} width={1903} height={2570} />
+          <ProjectItemShowcase src={oms3} width={1903} height={3284} />
+          <div className="grid grid-cols-2 gap-2 lg:gap-4">
+            <ProjectItemShowcase src={omsMobile2} width={437} height={965} />
+            <ProjectItemShowcase src={omsMobile3} width={437} height={965} />
           </div>
         </ProjectShowcase>
       </Section>

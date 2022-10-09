@@ -1,10 +1,14 @@
-import BackToHome from "../components/backToHome";
 import ProjectShowcase from "../components/projectShowcase";
 import Project from "../layouts/project";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
 import Section from "../layouts/section";
+import ProjectItemShowcase from "../components/projectItemShowcase";
+import manage from "../assets/manage/manage.png";
+import manage2 from "../assets/manage/manage-2.png";
+import manageMobile from "../assets/manage/manage-mobile.png";
+import manageMobile2 from "../assets/manage/manage-2-mobile.png";
 
 export default function Manage() {
   const project = {
@@ -30,45 +34,11 @@ export default function Manage() {
           links={project.links}
           key={project.id}
         >
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 ">
-            <Zoom>
-              <Image
-                src="/manage.png"
-                layout="responsive"
-                width={1865}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
-            <Zoom>
-              <Image
-                src="/manage-mobile.png"
-                layout="responsive"
-                width={437}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-4 md:order-2">
-            <Zoom>
-              <Image
-                src="/manage-2.png"
-                layout="responsive"
-                width={1865}
-                height={965}
-              />
-            </Zoom>
-          </div>
-          <div className="rounded-lg shadow-lg overflow-hidden w-full md:col-span-1">
-            <Zoom>
-              <Image
-                src="/manage-2-mobile.png"
-                layout="responsive"
-                width={437}
-                height={965}
-              />
-            </Zoom>
+          <ProjectItemShowcase src={manage} width={1903} height={955} />
+          <ProjectItemShowcase src={manage2} width={1903} height={965} />
+          <div className="grid grid-cols-2 gap-2 lg:gap-4">
+            <ProjectItemShowcase src={manageMobile} width={437} height={965} />
+            <ProjectItemShowcase src={manageMobile2} width={437} height={965} />
           </div>
         </ProjectShowcase>
       </Section>

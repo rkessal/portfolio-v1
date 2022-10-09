@@ -1,10 +1,13 @@
-import BackToHome from "../components/backToHome";
 import ProjectShowcase from "../components/projectShowcase";
 import Project from "../layouts/project";
 import Section from "../layouts/section";
-import Zoom from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
-import Image from "next/image";
+import ProjectItemShowcase from "../components/projectItemShowcase";
+import easybank from "../assets/easybank/easybank.png";
+import easybank2 from "../assets/easybank/easybank-2.png";
+import easybankMobile from "../assets/easybank/easybank-mobile.png";
+import easybankMobile2 from "../assets/easybank/easybank-2-mobile.png";
+import easybankMobile3 from "../assets/easybank/easybank-3-mobile.png";
+import easybankMobile4 from "../assets/easybank/easybank-4-mobile.png";
 
 export default function Easybank() {
   const project = {
@@ -28,67 +31,29 @@ export default function Easybank() {
           stack={project.stack}
           links={project.links}
         >
-          <div className="px-8 pt-8 overflow-hidden rounded-md max-h-256 lg:px-24 lg:pt-24 bg-gradient-to-bl from-gray-100 to-gray-200">
-            <Zoom>
-              <Image
-                src="/easybank.png"
-                layout="responsive"
-                width={1903}
-                height={1323}
-              />
-            </Zoom>
-          </div>
-          <div className="px-8 pt-8 overflow-hidden rounded-md max-h-256 lg:px-24 lg:pt-24 bg-gradient-to-bl from-gray-100 to-gray-200">
-            <Zoom>
-              <Image
-                src="/easybank-2.png"
-                layout="responsive"
-                width={1903}
-                height={893}
-              />
-            </Zoom>
-          </div>
+          <ProjectItemShowcase src={easybank} width={1903} height={1323} />
+          <ProjectItemShowcase src={easybank2} width={1903} height={893} />
           <div className="grid grid-cols-2 gap-2 lg:gap-4">
-            <div className="px-8 pt-8 bg-gradient-to-bl from-gray-100 to-gray-200 overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
-              <Zoom>
-                <Image
-                  src="/easybank-mobile.png"
-                  layout="responsive"
-                  width={437}
-                  height={965}
-                />
-              </Zoom>
-            </div>
-            <div className="px-8 pt-8 bg-gradient-to-bl from-gray-100 to-gray-200 overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
-              <Zoom>
-                <Image
-                  src="/easybank-2-mobile.png"
-                  layout="responsive"
-                  width={437}
-                  height={965}
-                />
-              </Zoom>
-            </div>
-            <div className="px-8 pt-8 bg-gradient-to-bl from-gray-100 to-gray-200 overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
-              <Zoom>
-                <Image
-                  src="/easybank-3-mobile.png"
-                  layout="responsive"
-                  width={437}
-                  height={965}
-                />
-              </Zoom>
-            </div>
-            <div className="px-8 pt-8 bg-gradient-to-bl from-gray-100 to-gray-200 overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
-              <Zoom>
-                <Image
-                  src="/easybank-4-mobile.png"
-                  layout="responsive"
-                  width={437}
-                  height={965}
-                />
-              </Zoom>
-            </div>
+            <ProjectItemShowcase
+              src={easybankMobile}
+              width={437}
+              height={965}
+            />
+            <ProjectItemShowcase
+              src={easybankMobile2}
+              width={437}
+              height={965}
+            />
+            <ProjectItemShowcase
+              src={easybankMobile3}
+              width={437}
+              height={965}
+            />
+            <ProjectItemShowcase
+              src={easybankMobile4}
+              width={437}
+              height={965}
+            />
           </div>
         </ProjectShowcase>
       </Section>

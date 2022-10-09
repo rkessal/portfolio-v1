@@ -73,7 +73,7 @@ export default function ProjectShowcase({
           </div>
         </div>
         <div className="space-y-20 lg:order-3">
-          <p className="text-2xl h-[50vh]  leading-normal lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
+          <p className="text-2xl mb-10 leading-normal lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
             {desc}
           </p>
 
