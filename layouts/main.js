@@ -6,12 +6,12 @@ function Main({ router, children, home }) {
     hidden: {
       opacity: 0,
       x: 0,
-      y: router !== undefined ? 200 : 0,
+      y: router !== undefined ? 100 : 0,
     },
     enter: { opacity: 1, x: 0, y: 0, scale: 1 },
     exit: {
       opacity: 0,
-      y: router !== undefined ? 200 : 0,
+      y: router !== undefined ? 100 : 0,
     },
   };
 
@@ -21,7 +21,7 @@ function Main({ router, children, home }) {
       initial="hidden"
       animate="enter"
       exit="exit"
-      transition={{ type: "linear", duration: 0.4 }}
+      transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
       className="container mx-auto px-5 font-Poppins"
     >
       {!home && <BackToHome />}
