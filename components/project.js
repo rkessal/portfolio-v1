@@ -15,12 +15,12 @@ export default function Project({ id, link, src, label, tags }) {
         <div className="overflow-hidden relative bg-gradient-to-bl from-gray-100 to-gray-200 rounded-md  hover:cursor-pointer group">
           <Image
             src={`/${src}`}
-            width={1280}
-            height={720}
+            width={1920}
+            height={1080}
             alt={label}
             layout="responsive"
             objectFit="contain"
-            className="scale-50 group-hover:scale-[65%] ease-[cubic-bezier(0.6,0.01,-0.05,0.9)] duration-100"
+            className="group-hover:scale-105 ease-[cubic-bezier(0.6,0.01,-0.05,0.9)] duration-100"
           />
         </div>
         <div className="space-y-2">
