@@ -1,34 +1,22 @@
 import Project from "./project";
 import Section from "../layouts/section";
-import logo from "../assets/logo.svg";
-import Image from "next/image";
+import { urlFor } from "../lib/sanity";
 
-export default function Projects({ data, error }) {
-  if (!data)
-    return (
-      <div className="flex items-center">
-        <Image src={logo} height={100} width={100} />
-      </div>
-    );
-
-  data = JSON.parse(data);
-  data = data.reverse();
-  console.log(data);
+export default function Projects({ projectData }) {
   return (
     <Section>
       <div className="space-y-12">
-        {data.map((project) => (
-          <Project
-            data={data}
-            error={error}
-            key={project.id}
-            id={data.indexOf(project)}
-            label={project.title}
-            link={project.link}
-            src={project.image}
-            tags={project.tags}
-          />
-        ))}
+        {projectData &&
+          projectData.map((project) => (
+            <Project
+              key={project._id}
+              pos={projectData.indexOf(project)}
+              label={project.title}
+              link={`/${project.link}`}
+              src={urlFor(project.image).url()}
+              tags={project.stack}
+            />
+          ))}
       </div>
     </Section>
   );

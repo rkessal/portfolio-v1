@@ -4,11 +4,20 @@ import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import Projects from "../components/projects";
 import Main from "../layouts/main";
-import useSWR from "swr";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
-export default function Home() {
-  const { data, error } = useSWR("/api/projectsData", fetcher);
+import { usePreviewSubscription, getClient } from "@lib/sanity";
+import { groq } from "next-sanity";
+import { useRouter } from "next/router";
+
+export default function Home({ projectData, preview }) {
+  const router = useRouter();
+
+  const { data: projects } = usePreviewSubscription(query, {
+    initialData: projectData,
+    enabled: preview || router.query.preview !== undefined,
+  });
+  console.log(projects);
+
   return (
     <>
       <Head>
@@ -19,9 +28,33 @@ export default function Home() {
       <Main home={true}>
         <Navbar />
         <Hero />
-        <Projects data={data} error={error} />
+        <Projects projectData={projects} />
         <Footer />
       </Main>
     </>
   );
+}
+
+const query = groq`
+    *[_type == "project"] {
+      _id,
+      title,
+      image,
+      link,
+      stack[]->{
+        tag
+      }
+    }
+    `;
+
+export async function getStaticProps({ params, preview = false }) {
+  const project = await getClient(preview).fetch(query);
+
+  return {
+    props: {
+      projectData: project,
+      preview,
+    },
+    revalidate: 10,
+  };
 }

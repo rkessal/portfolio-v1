@@ -30,5 +30,4 @@ function Main({ router, children, home }) {
     </motion.div>
   );
 }
-
 export default Main;
