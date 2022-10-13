@@ -16,7 +16,6 @@ export default function Home({ projectData, preview }) {
     initialData: projectData,
     enabled: preview || router.query.preview !== undefined,
   });
-  console.log(projects);
 
   return (
     <>

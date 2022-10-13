@@ -12,7 +12,13 @@ export default function ProjectItemShowcase({ src, width, height }) {
       } bg-gradient-to-bl from-gray-100 to-gray-200 `}
     >
       <Zoom>
-        <Image src={src} layout="responsive" width={width} height={height} />
+        <Image
+          src={src}
+          layout="responsive"
+          width={width}
+          height={height}
+          alt=""
+        />
       </Zoom>
     </div>
   );

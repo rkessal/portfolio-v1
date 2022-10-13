@@ -33,7 +33,12 @@ export default function About() {
           </h1>
           <div className="flex flex-col items-center space-y-6 text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
             <div className="relative rounded-full overflow-hidden h-60 w-60 md:self-start md:rounded-md md:h-96 md:w-96">
-              <Image src={profilePic} layout="fill" objectFit="cover" />
+              <Image
+                src={profilePic}
+                layout="fill"
+                objectFit="cover"
+                alt="Rayhan"
+              />
             </div>
             <div className="flex flex-col space-y-2">
               <h2 className="hidden text-4xl font-medium lg:block">
@@ -71,12 +76,13 @@ export default function About() {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="top"
+                alt="Rayhan"
               />
             </div>
 
             <div className="flex flex-col space-y-2">
               <div className="hidden lg:block">
-                <Image src={sfbLogo} height={80} width={80} />
+                <Image src={sfbLogo} height={80} width={80} alt="sfb's logo" />
               </div>
               <p className="lg:max-w-lg xl:max-w-xl leading-loose">
                 Je fais du foot depuis mes 6 ans, j&apos;ai passé la majorité de

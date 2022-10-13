@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import BackToHome from "../components/backToHome";
 function Main({ router, children, home }) {
-  console.log(router);
   const variants = {
     hidden: {
       opacity: 0,
