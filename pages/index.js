@@ -35,7 +35,7 @@ export default function Home({ projectData, preview }) {
 }
 
 const query = groq`
-    *[_type == "project"] {
+    *[_type == "project"] | order(_createdAt desc){
       _id,
       title,
       image,
