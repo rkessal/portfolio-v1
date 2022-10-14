@@ -3,9 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["cdn.sanity.io"],
+    domains: ["cdn.sanity.io", "res.cloudinary.com"],
   },
 };
+
+const withVideos = require("next-videos");
 
 const STUDIO_REWRITE = {
   source: "/studio/:path*",
@@ -15,7 +17,7 @@ const STUDIO_REWRITE = {
       : "/studio/index.html",
 };
 
-(module.exports = nextConfig),
+((module.exports = nextConfig), withVideos),
   {
     rewrites: () => [STUDIO_REWRITE],
   };

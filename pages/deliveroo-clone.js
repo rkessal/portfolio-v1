@@ -1,3 +1,4 @@
+import ProjectItemShowcase from "components/projectItemShowcase";
 import ProjectShowcase, {
   ProjectDescriptionText,
   ProjectPresentationText,
@@ -32,11 +33,54 @@ export default function DeliverooClone() {
             Ce projet est un clone de l'application "Deliveroo", développé avec
             React Native, une appliation de livraison de plat à domicile.
           </ProjectPresentationText>
+
+          <div className="grid md:grid-cols-2 gap-2 lg:gap-4">
+            <ProjectItemShowcase
+              src="https://res.cloudinary.com/dsmrg2vyw/video/upload/v1665776535/deliveroo-clone/deliveroo-vid_tzm3il.mp4"
+              height={960}
+              width={540}
+              video
+            />
+            <span className="hidden md:block">
+              <ProjectItemShowcase
+                src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0025_rgsyaq.jpg"
+                width={1080}
+                height={1920}
+              />
+            </span>
+          </div>
+          <div className="grid grid-cols-2 gap-2 lg:gap-4">
+            <ProjectItemShowcase
+              src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0026_otikw6.jpg"
+              width={1080}
+              height={1920}
+            />
+            <ProjectItemShowcase
+              src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0028_kil9qw.jpg"
+              width={1080}
+              height={1920}
+            />
+            <ProjectItemShowcase
+              src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0030_xi1xkr.jpg"
+              width={1080}
+              height={1920}
+            />
+            <ProjectItemShowcase
+              src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0024_p176rs.jpg"
+              width={1080}
+              height={1920}
+            />
+          </div>
           <ProjectDescriptionText title="Sanity">
             Les restaurants, les plats ainsi que les catégories mises en avant
             sont affichés grâce a Sanity avec des requêtes GROQ. C'est donc un
             affichage dynamique.
           </ProjectDescriptionText>
+          <ProjectItemShowcase
+            height={927}
+            width={1920}
+            src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665777425/deliveroo-clone/Screenshot_2022-10-14_at_20-46-14_deliveroo-clone_Sanity_ejuge6.png"
+          />
           <ProjectDescriptionText>
             Chaque schema de document (Restaurant, Dishes et Featured Category)
             possède un nom, un type, un titre et des champs.
