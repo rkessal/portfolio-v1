@@ -21,7 +21,7 @@ function Main({ router, children, home }) {
       animate="enter"
       exit="exit"
       transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
-      className="container mx-auto px-5 font-Poppins"
+      className="container mx-auto px-5 font-Inter"
     >
       {!home && <BackToHome />}
       {children}

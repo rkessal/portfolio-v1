@@ -55,7 +55,7 @@ export default function ProjectShowcase({
                       <a className="flex flex-row items-center space-x-3 group">
                         <span className="group-hover:underline">Repo</span>
                         <svg
-                          class="w-5 h-5"
+                          className="w-5 h-5"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                         >
@@ -72,14 +72,36 @@ export default function ProjectShowcase({
             </div>
           </div>
         </div>
-        <div className="space-y-20 lg:order-3">
-          <p className="text-2xl mb-10 leading-normal lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
-            {desc}
-          </p>
-
-          <div className="w-full space-y-2 lg:space-y-4">{children}</div>
+        <div className="space-y-20 lg:order-3 w-full">
+          {desc && (
+            <p className="text-2xl mb-10 leading-normal lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
+              {desc}
+            </p>
+          )}
+          <div className="w-full space-y-10 lg:space-y-16">{children}</div>
         </div>
       </div>
     </>
+  );
+}
+
+export function ProjectPresentationText({ children }) {
+  return (
+    <p className="text-2xl mb-10 leading-normal font-medium lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
+      {children}
+    </p>
+  );
+}
+
+export function ProjectDescriptionText({ title, children }) {
+  return (
+    <div className="max-w-2xl space-y-4 text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl lg:space-y-6">
+      {title && (
+        <h3 className="mb-4 text-3xl font-medium leading-tight lg:leading-tight lg:text-4xl">
+          {title}
+        </h3>
+      )}
+      <p>{children}</p>
+    </div>
   );
 }

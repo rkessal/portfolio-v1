@@ -20,7 +20,7 @@ export default function Home({ projectData, preview }) {
   return (
     <>
       <Head>
-        <title>Portfolio</title>
+        <title>Errka - Portfolio</title>
         <meta name="description" content="Errká's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
