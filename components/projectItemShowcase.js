@@ -32,7 +32,7 @@ export default function ProjectItemShowcase({
       {video && (
         <video autoPlay muted loop height={height} width={width}>
           <source src={src} type="video/mp4" />
-          Your browser doesn't support the video tag.
+          Your browser doesn&apos;t support the video tag.
         </video>
       )}
     </div>

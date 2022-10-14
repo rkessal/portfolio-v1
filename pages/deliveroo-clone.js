@@ -96,8 +96,9 @@ export default function DeliverooClone() {
             theme={dracula}
           />
           <ProjectDescriptionText title="Redux">
-            Redux centralise les "states" de l&apos;application, ce qui permet
-            d&apos;être mieux organisé et facilite aussi le debuggage.
+            Redux centralise les &quot;states&quot; de l&apos;application, ce
+            qui permet d&apos;être mieux organisé et facilite aussi le
+            debuggage.
           </ProjectDescriptionText>
           <ProjectDescriptionText>
             Je l&apos;ai utilisé pour afficher le panier et les infos du
@@ -119,7 +120,7 @@ export default function DeliverooClone() {
           />
           <ProjectDescriptionText title="Tailwind">
             Enfin pour le style de l&apos;affichage, Tailwind permet d&apos;être
-            beaucoup plus rapide. Pour React Native, il faudra utiliser{" "}
+            beaucoup plus rapide. Pour React Native, il faudra utiliser
             <Link href="https://www.nativewind.dev/">
               <a className="underline text-redMain">Native Wind</a>
             </Link>
