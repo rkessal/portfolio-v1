@@ -30,8 +30,9 @@ export default function DeliverooClone() {
           key={project.id}
         >
           <ProjectPresentationText>
-            Ce projet est un clone de l'application "Deliveroo", développé avec
-            React Native, une appliation de livraison de plat à domicile.
+            Ce projet est un clone de l&apos;application &quot;Deliveroo&quot;,
+            développé avec React Native, une appliation de livraison de plat à
+            domicile.
           </ProjectPresentationText>
 
           <div className="grid md:grid-cols-2 gap-2 lg:gap-4">
@@ -60,6 +61,8 @@ export default function DeliverooClone() {
               width={1080}
               height={1920}
             />
+          </div>
+          <div className="grid grid-cols-2 gap-2 lg:gap-4">
             <ProjectItemShowcase
               src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0030_xi1xkr.jpg"
               width={1080}
@@ -73,8 +76,8 @@ export default function DeliverooClone() {
           </div>
           <ProjectDescriptionText title="Sanity">
             Les restaurants, les plats ainsi que les catégories mises en avant
-            sont affichés grâce a Sanity avec des requêtes GROQ. C'est donc un
-            affichage dynamique.
+            sont affichés grâce a Sanity avec des requêtes GROQ. C&apos;est donc
+            un affichage dynamique.
           </ProjectDescriptionText>
           <ProjectItemShowcase
             height={927}
@@ -93,11 +96,12 @@ export default function DeliverooClone() {
             theme={dracula}
           />
           <ProjectDescriptionText title="Redux">
-            Redux centralise les "states" de l'application, ce qui permet d'être
-            mieux organisé et facilite aussi le debuggage.
+            Redux centralise les "states" de l&apos;application, ce qui permet
+            d&apos;être mieux organisé et facilite aussi le debuggage.
           </ProjectDescriptionText>
           <ProjectDescriptionText>
-            Je l'ai utilisé pour afficher le panier et les infos du restaurant.
+            Je l&apos;ai utilisé pour afficher le panier et les infos du
+            restaurant.
           </ProjectDescriptionText>
           <CopyBlock
             text={codeReduxBasket}
@@ -114,8 +118,8 @@ export default function DeliverooClone() {
             theme={dracula}
           />
           <ProjectDescriptionText title="Tailwind">
-            Enfin pour le style de l'affichage, Tailwind permet d'être beaucoup
-            plus rapide. Pour React Native, il faudra utiliser{" "}
+            Enfin pour le style de l&apos;affichage, Tailwind permet d&apos;être
+            beaucoup plus rapide. Pour React Native, il faudra utiliser{" "}
             <Link href="https://www.nativewind.dev/">
               <a className="underline text-redMain">Native Wind</a>
             </Link>
