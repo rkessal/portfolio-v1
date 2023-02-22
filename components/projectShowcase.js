@@ -101,7 +101,7 @@ export function ProjectDescriptionText({ title, children }) {
           {title}
         </h3>
       )}
-      <p>{children}</p>
+      {children}
     </div>
   );
 }

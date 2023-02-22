@@ -65,20 +65,20 @@ function Prices() {
             <ProjectDescriptionText title="Preços">
               <ul>
                 <li>
-                  <span className="text-redMain">• R$ 400,00</span> -
+                  <span className="text-redMain">• R$ 850,00</span> -
                   Desenvolvimento
                 </li>
                 <li>
-                  <span className="text-redMain">• R$ 200,00</span> -
+                  <span className="text-redMain">• R$ 350,00</span> -
                   Infraestrutura
                 </li>
               </ul>
             </ProjectDescriptionText>
             <h2 className="uppercase tracking-wider text-3xl text-black text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-5xl">
-              TOTAL: <span className="text-redMain"> R$ 600,00*</span>
+              TOTAL: <span className="text-redMain"> R$ 1200,00*</span>
             </h2>
             <p className="text-sm italic">
-              Durante os primeiros 12 meses, depois custa R$ 200,00 por ano
+              *Durante os primeiros 12 meses, depois custa R$ 350,00 por ano
               (infraestrutura).
             </p>
           </div>
