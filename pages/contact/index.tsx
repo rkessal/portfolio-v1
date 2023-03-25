@@ -3,31 +3,32 @@ import React, { FormEvent, useState } from "react";
 import Main from "../../layouts/main";
 import Section from "../../layouts/section";
 import { useRouter } from "next/router";
-import sendMessage, { Payload } from "./sendMessage";
-
-type Props = {};
+import sendMessage, { Payload } from "../api/contact/contact.service";
 
 type Status = {
   success: undefined | boolean;
   message: string;
 };
 
-function Index({}: Props) {
+const Index = () => {
   const router = useRouter();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<Status>();
+  const [status, setStatus] = useState<Status>({
+    success: true,
+    message: "",
+  });
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     let payload: Payload = {
       name,
       email,
       message,
     };
-    const response = sendMessage(payload);
+    const response = await sendMessage(payload);
 
     if (!response.error) {
       setName("");
@@ -157,6 +158,6 @@ function Index({}: Props) {
       </Main>
     </>
   );
-}
+};
 
 export default Index;

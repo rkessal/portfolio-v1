@@ -1,7 +1,10 @@
 import { transporter } from "@lib/nodemailer/nodemailer";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const mailData = {
     from: process.env.NEXT_PUBLIC_NODEMAILER_USER,
     to: "hello@errka.dev",
@@ -19,4 +22,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       return res.status(200).send(info.response);
     }
   });
-};
+}
