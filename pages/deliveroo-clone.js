@@ -122,7 +122,7 @@ export default function DeliverooClone() {
             Enfin pour le style de l&apos;affichage, Tailwind permet d&apos;être
             beaucoup plus rapide. Pour React Native, il faudra utiliser{" "}
             <Link href="https://www.nativewind.dev/">
-              <a className="underline text-redMain">Native Wind</a>
+              <a className="underline text-redMain-500">Native Wind</a>
             </Link>
             .
           </ProjectDescriptionText>

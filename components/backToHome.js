@@ -5,7 +5,7 @@ export default function BackToHome() {
     <Link href="/" scroll={false}>
       <div className="flex flex-row pt-8 items-center space-x-3 mb-8 hover:cursor-pointer w-fit">
         <FaChevronLeft color="#630000" />
-        <span className="text-redMain font-medium">Retour</span>
+        <span className="text-redMain-500 font-medium">Retour</span>
       </div>
     </Link>
   );
