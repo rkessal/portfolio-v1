@@ -2493,6 +2493,11 @@ react-medium-image-zoom@^5.0.3:
   resolved "https://registry.yarnpkg.com/react-medium-image-zoom/-/react-medium-image-zoom-5.0.3.tgz#810f73444d4680df5108d41d5689b081b4d4e2ae"
   integrity sha512-ARmYFwxeKsw31WRt9P64KvVX/458LgGsDXSdpZj0JuQEJlSz8qx0gqv7Ip753AkVpv1gwBbZgD8t7Wh/MtaFiQ==
 
+react-spinners@^0.13.8:
+  version "0.13.8"
+  resolved "https://registry.yarnpkg.com/react-spinners/-/react-spinners-0.13.8.tgz#5262571be0f745d86bbd49a1e6b49f9f9cb19acc"
+  integrity sha512-3e+k56lUkPj0vb5NDXPVFAOkPC//XyhKPJjvcGjyMNPWsBKpplfeyialP74G7H7+It7KzhtET+MvGqbKgAqpZA==
+
 react-syntax-highlighter@^12.2.1:
   version "12.2.1"
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-12.2.1.tgz#14d78352da1c1c3f93c6698b70ec7c706b83493e"

@@ -4,6 +4,7 @@ import Main from "../../layouts/main";
 import Section from "../../layouts/section";
 import { useRouter } from "next/router";
 import sendMessage, { Payload } from "../api/contact/contact.service";
+import ClipLoader from "react-spinners/ClipLoader";
 
 type Status = {
   success: undefined | boolean;
@@ -20,14 +21,18 @@ const Index = () => {
     success: true,
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsLoading(true);
+
     let payload: Payload = {
       name,
       email,
       message,
     };
+
     const response = await sendMessage(payload);
 
     if (!response.error) {
@@ -44,6 +49,8 @@ const Index = () => {
         message: "Une erreur s'est produite, veuillez réessayer plus tard.",
       });
     }
+
+    setIsLoading(false);
   };
 
   return (
@@ -139,7 +146,14 @@ const Index = () => {
                   type="submit"
                   className="text-white bg-redMain-700 hover:bg-redMain-800 focus:ring-4 focus:outline-none focus:ring-redMain-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
                 >
-                  Envoyer
+                  {!isLoading && "Envoyer"}
+                  <ClipLoader
+                    color="white"
+                    loading={isLoading}
+                    size={15}
+                    aria-label="Loading Spinner"
+                    data-testid="loader"
+                  />
                 </button>
 
                 {status && (
