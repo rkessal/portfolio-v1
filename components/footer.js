@@ -8,7 +8,7 @@ export default function Footer() {
       <a href="mailto:hello@errka.dev" aria-label="contact">
         hello@errka.dev
       </a>
-      <h3>Besancon, FR</h3>
+      <h3>Paris, FR</h3>
       <div className="flex flex-row space-x-2">
         <Link href="https://github.com/rkessal">
           <a aria-label="github">
