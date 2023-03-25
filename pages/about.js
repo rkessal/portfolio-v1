@@ -1,22 +1,22 @@
 import Head from "next/head";
 import Image from "next/image";
-import Main from "../layouts/main";
-import Section from "../layouts/section";
 import Link from "next/link";
-import profilePic from "../assets/profile-pic.jpg";
+import { useRouter } from "next/router";
 import futsalPic from "../assets/futsal-pic.jpg";
-import sfbLogo from "../assets/sfb-logo.png";
-import logoLGBM from "../assets/logo-logegbm.jpg";
-import logo from "../assets/logo.svg";
-import logoGBM from "../assets/logo-gbm.svg";
 import logoCrous from "../assets/logo-crous.png";
-import logoYt from "../assets/logo-yt.png";
-import logoPergaud from "../assets/logo-pergaud.bmp";
+import logoGBM from "../assets/logo-gbm.svg";
 import logoIUTBM from "../assets/logo-iutbm.jpg";
 import logoJulesHaag from "../assets/logo-juleshaag.png";
+import logoLGBM from "../assets/logo-logegbm.jpg";
+import logoPergaud from "../assets/logo-pergaud.bmp";
+import logoYt from "../assets/logo-yt.png";
+import logo from "../assets/logo.svg";
+import profilePic from "../assets/profile-pic.jpg";
+import sfbLogo from "../assets/sfb-logo.png";
 import BackToHome from "../components/backToHome";
-import { useRouter } from "next/router";
 import Position from "../components/position";
+import Main from "../layouts/main";
+import Section from "../layouts/section";
 
 export default function About() {
   const router = useRouter();
@@ -28,7 +28,7 @@ export default function About() {
       </Head>
       <Main router={router.asPath}>
         <Section>
-          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-6xl">
+          <h1 className="uppercase tracking-wider text-4xl text-redMain-500 text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-6xl">
             Qui suis-je ?
           </h1>
           <div className="flex flex-col items-center space-y-6 text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
@@ -47,7 +47,7 @@ export default function About() {
               <p className="lg:max-w-lg xl:max-w-xl leading-loose">
                 <span className="lg:hidden">Je m&apos;appelle Rayhan </span> et
                 je suis{" "}
-                <span className="font-medium text-redMain">
+                <span className="font-medium text-redMain-500">
                   développeur web/mobile
                 </span>
                 , originaire de Besançon qui se situe dans la magnifique région
@@ -66,7 +66,7 @@ export default function About() {
           </div>
         </Section>
         <Section>
-          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
+          <h1 className="uppercase tracking-wider text-4xl text-redMain-500 text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
             En dehors du travail
           </h1>
           <div className="flex flex-col items-center space-y-6 text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
@@ -106,7 +106,7 @@ export default function About() {
           </div>
         </Section>
         <Section>
-          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
+          <h1 className="uppercase tracking-wider text-4xl text-redMain-500 text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
             Experience
           </h1>
           <div className="flex flex-col space-y-6">
@@ -145,7 +145,7 @@ export default function About() {
           </div>
         </Section>
         <Section>
-          <h1 className="uppercase tracking-wider text-4xl text-redMain text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
+          <h1 className="uppercase tracking-wider text-4xl text-redMain-500 text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
             Education
           </h1>
           <div className="flex flex-col space-y-6">

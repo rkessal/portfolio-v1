@@ -4,7 +4,7 @@ import Section from "../layouts/section";
 
 export default function Footer() {
   return (
-    <footer className="border-t-[1px] py-4 flex flex-col items-start text-center space-y-5 text-redMain lg:flex-row lg:justify-between lg:items-center lg:space-y-0">
+    <footer className="border-t-[1px] py-4 flex flex-col items-start text-center space-y-5 text-redMain-500 lg:flex-row lg:justify-between lg:items-center lg:space-y-0">
       <a href="mailto:hello@errka.dev" aria-label="contact">
         hello@errka.dev
       </a>
