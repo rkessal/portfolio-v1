@@ -28,8 +28,8 @@ export default function Home({ projectData, preview }) {
         <Navbar />
         <Hero />
         <Projects projectData={projects} />
-        <Footer />
       </Main>
+      <Footer />
     </>
   );
 }

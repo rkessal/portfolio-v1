@@ -13,13 +13,48 @@ import logoYt from "../assets/logo-yt.png";
 import logo from "../assets/logo.svg";
 import profilePic from "../assets/profile-pic.jpg";
 import sfbLogo from "../assets/sfb-logo.png";
-import BackToHome from "../components/backToHome";
 import Position from "../components/position";
 import Main from "../layouts/main";
 import Section from "../layouts/section";
+import { useRef } from "react";
+import {
+  motion,
+  scrollYProgress,
+  useTransform,
+  useScroll,
+} from "framer-motion";
 
 export default function About() {
   const router = useRouter();
+
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x: 0,
+      y: router !== undefined ? 100 : 0,
+    },
+    enter: { opacity: 1, x: 0, y: 0, scale: 1 },
+    exit: {
+      opacity: 0,
+      y: router !== undefined ? 100 : 0,
+    },
+  };
+
+  const ref1 = useRef(null);
+  const { scrollYProgress: scroll1 } = useScroll({
+    target: ref1,
+    offset: ["end end", "start end"],
+  });
+
+  const ref2 = useRef(null);
+  const { scrollYProgress: scroll2 } = useScroll({
+    target: ref2,
+    offset: ["end end", "start end"],
+  });
+
+  const y1 = useTransform(scroll1, [0, 1], ["0%", "50%"]);
+  const y2 = useTransform(scroll2, [0, 1], ["0%", "30%"]);
+
   return (
     <>
       <Head>
@@ -31,16 +66,22 @@ export default function About() {
           <h1 className="uppercase tracking-wider text-4xl text-redMain-500 text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-6xl">
             Qui suis-je ?
           </h1>
-          <div className="flex flex-col items-center space-y-6 text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
-            <div className="relative rounded-full overflow-hidden h-60 w-60 md:self-start md:rounded-md md:h-96 md:w-96">
-              <Image
-                src={profilePic}
-                layout="fill"
-                objectFit="cover"
-                alt="Rayhan"
-              />
+          <div className="flex flex-col items-center space-y-16 text-left md:items-start">
+            <div className="w-full" ref={ref1}>
+              <motion.div
+                style={{ y: y1 }}
+                className=" relative overflow-hidden h-96 w-full lg:w-4/5 md:h-[90vh]"
+              >
+                <Image
+                  src={profilePic}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Rayhan"
+                  style={{ filter: "grayscale(80%)" }}
+                />
+              </motion.div>
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 max-w-2xl text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl">
               <h2 className="hidden text-4xl font-medium lg:block">
                 Je m&apos;appelle Rayhan
               </h2>
@@ -48,19 +89,27 @@ export default function About() {
                 <span className="lg:hidden">Je m&apos;appelle Rayhan </span> et
                 je suis{" "}
                 <span className="font-medium text-redMain-500">
-                  développeur web/mobile
+                  Ingénieur d&apos;Etudes et Développement{" "}
                 </span>
-                , originaire de Besançon qui se situe dans la magnifique région
-                de Franche-Comté. J&apos;ai toujours été passionné par le design
-                graphique et j&apos;ai mis mes mains sur Photoshop à l&apos;age
-                de 13 ans. J&apos;ai commencé en faisant des bannières et des
-                logos, puis j&apos;ai ouvert une chaine sur YouTube ou je
-                postais des{" "}
-                <Link href="https://www.youtube.com/user/PozenGFX">
-                  <a className="underline">&quot;SpeedArts&quot;</a>
+                chez{" "}
+                <Link href="https://www.hn-services.com/en/">
+                  <a target="_blank" className="underline">
+                    HN Services
+                  </a>
                 </Link>
-                . Je me suis orienté ensuite vers la programmation et j&apos;ai
-                obtenu mon bac +3 dans le développement web et mobile.
+                , originaire de Besançon qui se situe dans la magnifique région
+                de Franche-Comté.
+              </p>
+              <p className="lg:max-w-lg xl:max-w-xl leading-loose">
+                J&apos;ai toujours été passionné par le design graphique et
+                j&apos;ai mis mes mains sur Photoshop à l&apos;age de 13 ans.
+                J&apos;ai commencé en faisant des bannières et des logos, puis
+                j&apos;ai ouvert une chaine sur YouTube ou je postais des{" "}
+                &quot;SpeedArts&quot; .
+              </p>
+              <p className="lg:max-w-lg xl:max-w-xl leading-loose">
+                Je me suis orienté ensuite vers la programmation et j&apos;ai
+                obtenu ma licence dans le développement web et mobile.
               </p>
             </div>
           </div>
@@ -69,31 +118,38 @@ export default function About() {
           <h1 className="uppercase tracking-wider text-4xl text-redMain-500 text-center font-medium mb-12 md:text-left lg:w-2/3 lg:text-6xl">
             En dehors du travail
           </h1>
-          <div className="flex flex-col items-center space-y-6 text-left lg:space-y-0 lg:space-x-20 lg:flex-row lg:items-end ">
-            <div className="relative w-full h-80 rounded-md overflow-hidden lg:w-96 lg:h-96 md:self-end">
-              <Image
-                src={futsalPic}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="top"
-                alt="Rayhan"
-              />
+          <div className="flex flex-col items-center space-y-16 text-left md:items-start">
+            <div className="w-full" ref={ref2}>
+              <motion.div
+                style={{ y: y2 }}
+                className="relative overflow-hidden h-96 w-full md:h-[90vh]"
+              >
+                <Image
+                  src={futsalPic}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Rayhan"
+                  style={{ filter: "grayscale(80%)" }}
+                />
+              </motion.div>
             </div>
 
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 max-w-2xl text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl">
               <div className="hidden lg:block">
                 <Image src={sfbLogo} height={80} width={80} alt="sfb's logo" />
               </div>
               <p className="lg:max-w-lg xl:max-w-xl leading-loose">
                 Je fais du foot depuis mes 6 ans, j&apos;ai passé la majorité de
-                mon enfance à l&apos;ASPTT Besançon. J&apos;ai joué ensuite au
-                PSB, ou nous avons été promu en R1, et par la suite fini
-                champion. Je fais maintenant du futsal, au{" "}
+                mon enfance à l&apos;ASPTT Besançon.
+              </p>
+              <p className="lg:max-w-lg xl:max-w-xl leading-loose">
+                J&apos;ai joué ensuite au PSB, ou nous avons été promu en R1, et
+                par la suite fini champions. Je fais maintenant du futsal, au{" "}
                 <Link
                   href="https://www.instagram.com/sportingfutsalbesancon/?hl=en"
                   aria-label="sporting futsal besancon"
                 >
-                  <a>
+                  <a target="_blank">
                     <span className="underline">
                       Sporting Futsal de Besançon
                     </span>
@@ -101,6 +157,18 @@ export default function About() {
                 </Link>
                 , nous sommes dans le top 10 en France au niveau du nombre de
                 licenciés.
+              </p>
+
+              <p className="lg:max-w-lg xl:max-w-xl leading-loose">
+                Je suis aussi un fan des sports de combats, comme la boxe ou le
+                jiu jitsu brésilien et je suis ceinture marron de full-contact.
+                Ceintures que j&apos;ai passées au{" "}
+                <Link href="https://www.besac.com/besancon-full-self-defense-boxe-besancon-sponsor-459.php">
+                  <a className="underline" target="_blank">
+                    Besançon Self Défense
+                  </a>
+                </Link>
+                .
               </p>
             </div>
           </div>

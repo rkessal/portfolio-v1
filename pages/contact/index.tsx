@@ -65,10 +65,9 @@ const Index = () => {
             Contact
           </h1>
           <div className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-4">
-            <div className="w-full lg:w-1/3">
+            <div className="w-full shrink-0 lg:w-1/2">
               <h2 className="text-xl lg:text-2xl mb-8">
-                Un projet ou bien une question ? Vous pouvez me joindre par mail
-                ou téléphone, ou bien en remplissant le formulaire.
+                Un projet ou bien une question ?
               </h2>
               <h3 className="text-lg lg:text-xl">
                 <span className="font-medium">Email : </span>
@@ -79,7 +78,7 @@ const Index = () => {
                 <span className="text-redMain-700">+33 7 83 35 72 82</span>
               </h3>
             </div>
-            <form className="w-full lg:w-2/3" onSubmit={(e) => handleSubmit(e)}>
+            <form className="w-full" onSubmit={(e) => handleSubmit(e)}>
               <div className="flex flex-col gap-4">
                 <div className="relative z-0 w-full mb-6 group">
                   <input
@@ -90,13 +89,13 @@ const Index = () => {
                     onChange={(e) => {
                       setName(e.target.value);
                     }}
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-redMain-600 peer"
+                    className="block py-4 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-redMain-600 peer"
                     placeholder=" "
                     required
                   />
                   <label
                     htmlFor="name"
-                    className="peer-focus:font-medium absolute text-md lg:text-lg text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-redMain-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="peer-focus:font-medium absolute text-md lg:text-xl text-black duration-300 transform -translate-y-10 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-redMain-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-10"
                   >
                     Votre nom
                   </label>
@@ -110,13 +109,13 @@ const Index = () => {
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-redMain-600 peer"
+                    className="block py-4 px-0 w-full text-lg text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-redMain-600 peer"
                     placeholder=" "
                     required
                   />
                   <label
                     htmlFor="floating_email"
-                    className="peer-focus:font-medium absolute text-md lg:text-lg text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-redMain-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="peer-focus:font-medium absolute text-md lg:text-xl text-black duration-300 transform -translate-y-10 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-redMain-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-10"
                   >
                     Votre adresse mail
                   </label>
@@ -130,13 +129,13 @@ const Index = () => {
                     onChange={(e) => {
                       setMessage(e.target.value);
                     }}
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-redMain-600 peer"
+                    className="block py-4 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-redMain-600 peer"
                     placeholder=" "
                     required
                   />
                   <label
                     htmlFor="message"
-                    className="peer-focus:font-medium absolute text-md lg:text-lg text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-redMain-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="peer-focus:font-medium absolute text-md lg:text-xl text-black duration-300 transform -translate-y-10 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-redMain-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-10"
                   >
                     Votre message
                   </label>
@@ -144,7 +143,7 @@ const Index = () => {
 
                 <button
                   type="submit"
-                  className="text-white bg-redMain-700 hover:bg-redMain-800 focus:ring-4 focus:outline-none focus:ring-redMain-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+                  className="text-white bg-redMain-700 hover:bg-redMain-800 focus:ring-4 focus:outline-none focus:ring-redMain-300 font-medium text-sm w-full sm:w-auto px-5 py-5 lg:py-8 lg:text-xl text-center "
                 >
                   {!isLoading && "Envoyer"}
                   <ClipLoader

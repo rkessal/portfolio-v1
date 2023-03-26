@@ -13,7 +13,7 @@ export default function ProjectItemShowcase({
 
   return (
     <div
-      className={`px-8 pt-8 overflow-hidden rounded-md max-h-${
+      className={`px-8 pt-8 overflow-hidden max-h-${
         mobile ? "104 lg:max-h-120" : "256 lg:px-24 lg:pt-24"
       } bg-gradient-to-bl from-gray-100 to-gray-200 `}
     >
