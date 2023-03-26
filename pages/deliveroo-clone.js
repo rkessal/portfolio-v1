@@ -31,7 +31,7 @@ export default function DeliverooClone() {
         >
           <ProjectPresentationText>
             Ce projet est un clone de l&apos;application &quot;Deliveroo&quot;,
-            développé avec React Native, une appliation de livraison de plat à
+            développé avec React Native, une application de livraison de plat à
             domicile.
           </ProjectPresentationText>
 

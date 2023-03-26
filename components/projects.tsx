@@ -2,12 +2,12 @@ import Project from "./project";
 import Section from "../layouts/section";
 import { urlFor } from "../lib/sanity";
 
-export default function Projects({ projectData }) {
+export default function Projects({ projectData }: { projectData: any[] }) {
   return (
     <Section>
       <div className="space-y-12">
         {projectData &&
-          projectData.map((project) => (
+          projectData.map((project: any) => (
             <Project
               key={project._id}
               pos={projectData.indexOf(project)}
