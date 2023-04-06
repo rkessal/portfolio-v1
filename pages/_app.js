@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <AnimatePresence
         mode="wait"
-        initial={false}
+        initial={true}
         onExitComplete={() => {
           if (typeof window !== "undefined") {
             window.scrollTo({ top: 0 });
