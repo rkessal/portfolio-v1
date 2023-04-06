@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import BackToHome from "../components/backToHome";
-function Main({ router, children, home }) {
+
+type Props = {
+  router: string;
+  children: JSX.Element | JSX.Element[];
+  home?: boolean;
+};
+
+function Main({ router, children, home }: Props) {
   const variants = {
     hidden: {
       opacity: 0,
