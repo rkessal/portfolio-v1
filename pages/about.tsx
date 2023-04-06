@@ -160,8 +160,8 @@ export default function About() {
             >
               <h2 className="font-semibold">Développeur Web/Mobile</h2>
               <p className="leading-8">
-                Développement d`&apos;`une application Android et web qui
-                facilite l`&apos;`accès aux plans des bâtiments de Besançon.
+                Développement d&apos;une application Android et web qui facilite
+                l&apos;accès aux plans des bâtiments de Besançon.
               </p>
             </PresentationSection>
             <PresentationSection
@@ -175,7 +175,7 @@ export default function About() {
 
               <p className="leading-8">
                 Une application de gestion des salles de réunion ainsi
-                qu`&apos;`une application de gestion des véhicules du Crous de
+                qu&apos;une application de gestion des véhicules du Crous de
                 Besancon.
               </p>
             </PresentationSection>
