@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <Section>
-      <motion.div style={{ y }} className="flex h-[60vh] items-center">
+      <motion.div style={{ y }} className="flex h-[50vh] items-center">
         <h1 className="text-4xl font-medium leading-relaxed lg:text-6xl lg:leading-relaxed xl:w-4/5">
           Je travaille la <span className="text-redMain-500">conception</span>,
           le <span className="text-redMain-500">design</span> et le{" "}
