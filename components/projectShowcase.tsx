@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FiExternalLink } from "react-icons/fi";
 import PageTitle from "./pageTitle";
+import { motion } from "framer-motion";
 
 type Props = {
   title: string;
@@ -94,13 +95,24 @@ export default function ProjectShowcase({
   );
 }
 
+const transition = { duration: 1.6, ease: [0.6, 0.01, -0.05, 0.9] };
+
+const animation = {
+  initial: { y: 30, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition,
+  },
+};
+
 export function ProjectPresentationText({
   children,
 }: {
   children: JSX.Element[];
 }) {
   return (
-    <p className="text-2xl mb-10 leading-normal font-medium lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
+    <p className="text-2xl mb-10 leading-normal lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
       {children}
     </p>
   );
@@ -114,13 +126,21 @@ export function ProjectDescriptionText({
   children: JSX.Element | JSX.Element[];
 }) {
   return (
-    <div className="max-w-2xl space-y-4 text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl lg:space-y-6">
-      {title && (
-        <h3 className="mb-4 text-3xl font-medium leading-tight lg:leading-tight lg:text-4xl">
-          {title}
-        </h3>
-      )}
-      {children}
+    <div className="overflow-hidden">
+      <motion.div
+        variants={animation}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="max-w-2xl space-y-4 text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl lg:space-y-6"
+      >
+        {title && (
+          <h3 className="mb-4 text-3xl font-medium leading-tight lg:leading-tight lg:text-4xl">
+            {title}
+          </h3>
+        )}
+        {children}
+      </motion.div>
     </div>
   );
 }

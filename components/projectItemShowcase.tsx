@@ -1,6 +1,7 @@
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Image, { StaticImageData } from "next/image";
+import AnimatedImage from "./AnimatedImage";
 
 type Props = {
   src: StaticImageData;
@@ -26,7 +27,7 @@ export default function ProjectItemShowcase({
       } bg-gradient-to-bl from-gray-100 to-gray-200 `}
     >
       {!video && (
-        <Zoom>
+        <AnimatedImage>
           <Image
             src={src}
             layout="responsive"
@@ -35,13 +36,15 @@ export default function ProjectItemShowcase({
             alt=""
             className={className}
           />
-        </Zoom>
+        </AnimatedImage>
       )}
       {video && (
-        <video autoPlay muted loop height={height} width={width}>
-          <source src={src as any} type="video/mp4" />
-          Your browser doesn&apos;t support the video tag.
-        </video>
+        <AnimatedImage>
+          <video autoPlay muted loop height={height} width={width}>
+            <source src={src as any} type="video/mp4" />
+            Your browser doesn&apos;t support the video tag.
+          </video>
+        </AnimatedImage>
       )}
     </div>
   );
