@@ -1,6 +1,14 @@
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+
+type Props = {
+  src: StaticImageData;
+  width: number;
+  height: number;
+  video?: string;
+  className?: string;
+};
 
 export default function ProjectItemShowcase({
   src,
@@ -8,7 +16,7 @@ export default function ProjectItemShowcase({
   height,
   video,
   className,
-}) {
+}: Props) {
   const mobile = width < height ? true : false;
 
   return (
@@ -31,7 +39,7 @@ export default function ProjectItemShowcase({
       )}
       {video && (
         <video autoPlay muted loop height={height} width={width}>
-          <source src={src} type="video/mp4" />
+          <source src={src as any} type="video/mp4" />
           Your browser doesn&apos;t support the video tag.
         </video>
       )}
