@@ -33,30 +33,41 @@ export default function Oms() {
         >
           <ProjectItemShowcase src={oms} width={1903} height={1503} />
           <ProjectDescriptionText>
-            Pour répondre aux besoins du client, j&apos;ai opté pour un site web
-            simple et facile d&apos;utilisation. J&apos;ai choisi des couleurs
-            basiques, noir et blanc, avec une police Serif pour les titres et
-            une police sans Serif pour le contenu.
+            <p>
+              Pour répondre aux besoins du client, j&apos;ai opté pour un site
+              web simple et facile d&apos;utilisation. J&apos;ai choisi des
+              couleurs basiques, noir et blanc, avec une police Serif pour les
+              titres et une police sans Serif pour le contenu.
+            </p>
           </ProjectDescriptionText>
           <ProjectItemShowcase src={oms2} width={1903} height={2570} />
           <ProjectDescriptionText title="Design et ergonomie">
-            Le site web a été conçu pour être simple et facile à utiliser. Les
-            couleurs basiques, noir et blanc, ainsi que les polices Serif et
-            sans Serif, assurent une lecture facile et agréable. Le site est
-            également responsive, c&apos;est-à-dire qu&apos;il s&apos;adapte à
-            l&apos;affichage sur différents dispositifs tels que les
-            ordinateurs, les tablettes et les téléphones mobiles.
+            <p>
+              Le site web a été conçu pour être simple et facile à utiliser. Les
+              couleurs basiques, noir et blanc, ainsi que les polices Serif et
+              sans Serif, assurent une lecture facile et agréable.
+            </p>
+            <p>
+              Le site est également responsive, c&apos;est-à-dire qu&apos;il
+              s&apos;adapte à l&apos;affichage sur différents dispositifs tels
+              que les ordinateurs, les tablettes et les téléphones mobiles.
+            </p>
           </ProjectDescriptionText>
 
           <ProjectItemShowcase src={oms3} width={1903} height={3284} />
 
           <ProjectDescriptionText title="Fonctionnalité principale">
-            La fonctionnalité de don était la plus importante du site.
-            C&apos;est pourquoi j&apos;ai créé une page dédiée à cette
-            fonctionnalité. Elle permet aux visiteurs de faire un don facilement
-            et en toute sécurité. Un bouton &quot;Faire un don&quot; a été placé
-            en évidence dans le pied de page, reprenant la couleur principale du
-            logo de l&apos;association.
+            <p>
+              La fonctionnalité de don était la plus importante du site.
+              C&apos;est pourquoi j&apos;ai créé une page dédiée à cette
+              fonctionnalité. Elle permet aux visiteurs de faire un don
+              facilement et en toute sécurité.
+            </p>
+            <p>
+              Un bouton &quot;Faire un don&quot; a été placé en évidence dans le
+              pied de page, reprenant la couleur principale du logo de
+              l&apos;association.
+            </p>
           </ProjectDescriptionText>
           <div className="grid grid-cols-2 gap-2 lg:gap-4">
             <ProjectItemShowcase src={omsMobile2} width={437} height={965} />
@@ -64,11 +75,15 @@ export default function Oms() {
           </div>
 
           <ProjectDescriptionText title="Navigation">
-            La navigation sur le site est simple et intuitive. Les visiteurs
-            peuvent facilement trouver les informations dont ils ont besoin
-            grâce aux menus et aux liens vers les différentes pages. Les pages
-            sont également interconnectées, ce qui permet une navigation fluide
-            et efficace.
+            <p>
+              La navigation sur le site est simple et intuitive. Les visiteurs
+              peuvent facilement trouver les informations dont ils ont besoin
+              grâce aux menus et aux liens vers les différentes pages.
+            </p>
+            <p>
+              Les pages sont également interconnectées, ce qui permet une
+              navigation fluide et efficace.
+            </p>
           </ProjectDescriptionText>
         </ProjectShowcase>
       </Section>

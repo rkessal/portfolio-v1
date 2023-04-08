@@ -111,7 +111,7 @@ export function ProjectDescriptionText({
   children,
 }: {
   title?: string;
-  children: string;
+  children: JSX.Element | JSX.Element[];
 }) {
   return (
     <div className="max-w-2xl space-y-4 text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl lg:space-y-6">
