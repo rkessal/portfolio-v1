@@ -6,7 +6,7 @@ import ProjectShowcase, {
 import Project from "layouts/project";
 import Section from "layouts/section";
 import Link from "next/link";
-import { CodeBlock, CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, atomOneLight } from "react-code-blocks";
 
 export default function DeliverooClone() {
   const project = {
@@ -19,6 +19,7 @@ export default function DeliverooClone() {
       },
     ],
   };
+
   return (
     <Project title="Deliveroo Clone" desc="Projet Deliveroo Clone">
       <Section>
@@ -34,7 +35,6 @@ export default function DeliverooClone() {
             développé avec React Native, une application de livraison de plat à
             domicile.
           </ProjectPresentationText>
-
           <div className="grid md:grid-cols-2 gap-2 lg:gap-4">
             <ProjectItemShowcase
               src="https://res.cloudinary.com/dsmrg2vyw/video/upload/v1665776535/deliveroo-clone/deliveroo-vid_tzm3il.mp4"
@@ -42,6 +42,7 @@ export default function DeliverooClone() {
               width={540}
               video
             />
+
             <span className="hidden md:block">
               <ProjectItemShowcase
                 src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0025_rgsyaq.jpg"
@@ -74,10 +75,26 @@ export default function DeliverooClone() {
               height={1920}
             />
           </div>
+          <ProjectDescriptionText title="Le projet">
+            <p>
+              Mon objectif était de fournir une expérience utilisateur similaire
+              à celle de l&apos;application d&apos;origine, comprenant les
+              fonctionnalités de sélection de restaurants, de plats et de
+              catégories, l&apos;ajout d&apos;articles au panier, passer une
+              commande et le suivi de l&apos;état de la livraison.
+            </p>
+          </ProjectDescriptionText>
           <ProjectDescriptionText title="Sanity">
-            Les restaurants, les plats ainsi que les catégories mises en avant
-            sont affichés grâce a Sanity avec des requêtes GROQ. C&apos;est donc
-            un affichage dynamique.
+            <p>
+              L&apos;un des aspects clés de ce projet était d&apos;afficher
+              dynamiquement les informations des restaurants, des plats et des
+              catégories.
+            </p>
+            <p>
+              J&apos;ai utilisé Sanity pour cela, avec des requêtes GROQ. Cela
+              m&apos;a permis d&apos;avoir un affichage dynamique et mis à jour
+              en temps réel.
+            </p>
           </ProjectDescriptionText>
           <ProjectItemShowcase
             height={927}
@@ -85,46 +102,55 @@ export default function DeliverooClone() {
             src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665777425/deliveroo-clone/Screenshot_2022-10-14_at_20-46-14_deliveroo-clone_Sanity_ejuge6.png"
           />
           <ProjectDescriptionText>
-            Chaque schema de document (Restaurant, Dishes et Featured Category)
-            possède un nom, un type, un titre et des champs.
+            <p>
+              Chaque schéma de document (Restaurant, Dishes et Featured
+              Category) possède un nom, un type, un titre et des champs.
+            </p>
+            <p>Par exemple, pour le schéma de document &quot;Dishes&quot; :</p>
           </ProjectDescriptionText>
           <CopyBlock
             text={codeSanity}
-            language="jsx"
+            language="js"
             showLineNumbers={false}
             wrapLines
-            theme={dracula}
+            theme={atomOneLight}
           />
           <ProjectDescriptionText title="Redux">
-            Redux centralise les &quot;states&quot; de l&apos;application, ce
-            qui permet d&apos;être mieux organisé et facilite aussi le
-            debuggage.
-          </ProjectDescriptionText>
-          <ProjectDescriptionText>
-            Je l&apos;ai utilisé pour afficher le panier et les infos du
-            restaurant.
+            <p>
+              Redux centralise les &quot;states&quot; de l&apos;application, ce
+              qui permet d&apos;être mieux organisé et facilite aussi le
+              debuggage.
+            </p>
+            <p>
+              Je l&apos;ai utilisé pour afficher le panier et les infos du
+              restaurant.
+            </p>
           </ProjectDescriptionText>
           <CopyBlock
             text={codeReduxBasket}
-            language="jsx"
+            language="js"
             showLineNumbers={false}
             wrapLines
-            theme={dracula}
+            theme={atomOneLight}
           />
           <CopyBlock
             text={codeReduxDishRow}
             language="jsx"
             showLineNumbers={false}
             wrapLines
-            theme={dracula}
+            theme={atomOneLight}
           />
           <ProjectDescriptionText title="Tailwind">
-            Enfin pour le style de l&apos;affichage, Tailwind permet d&apos;être
-            beaucoup plus rapide. Pour React Native, il faudra utiliser{" "}
-            <Link href="https://www.nativewind.dev/">
-              <a className="underline text-redMain-500">Native Wind</a>
-            </Link>
-            .
+            <p>
+              {" "}
+              Enfin pour le style de l&apos;affichage, Tailwind permet
+              d&apos;être beaucoup plus rapide. Pour React Native, il faudra
+              utiliser{" "}
+              <Link href="https://www.nativewind.dev/">
+                <a className="underline text-redMain-500">Native Wind</a>
+              </Link>
+              .
+            </p>
           </ProjectDescriptionText>
         </ProjectShowcase>
       </Section>
@@ -132,128 +158,131 @@ export default function DeliverooClone() {
   );
 }
 
-const codeSanity = `// .../schemas/dish.js
-export default {
-  name: "dish",
-  title: "Dish",
-  type: "document",
-  fields: [
-    {
-      name: "name",
-      title: "Dish's name",
-      type: "string",
-      validation: (rule) => rule.required(),
-    },
+const codeSanity = `
+ // .../schemas/dish.js
+  export default {
+    name: "dish",
+    title: "Dish",
+    type: "document",
+    fields: [
+      {
+        name: "name",
+        title: "Dish's name",
+        type: "string",
+        validation: (rule) => rule.required(),
+      },
 
-    {
-      name: "short_description",
-      title: "short description",
-      type: "string",
-      validation: (rule) => rule.max(500),
-    },
-    {
-      name: "price",
-      title: "Dish's price",
-      type: "number",
-    },
+      {
+        name: "short_description",
+        title: "short description",
+        type: "string",
+        validation: (rule) => rule.max(500),
+      },
+      {
+        name: "price",
+        title: "Dish's price",
+        type: "number",
+      },
 
-    {
-      name: "image",
-      title: "Dish's image",
-      type: "image",
-    },
-  ],
-};`;
+      {
+        name: "image",
+        title: "Dish's image",
+        type: "image",
+      },
+    ],
+  };`;
 
-const codeReduxDishRow = `// .../components/DishRow.js
-import { useDispatch, useSelector } from "react-redux";
-import {
-  addToBasket,
-  removeFromBasket,
-  selectBasketItems,
-  selectBasketItemsWithId,
-} from "../features/basketSlice";
+const codeReduxDishRow = `
+  // .../components/DishRow.js
+  import { useDispatch, useSelector } from "react-redux";
+  import {
+    addToBasket,
+    removeFromBasket,
+    selectBasketItems,
+    selectBasketItemsWithId,
+  } from "../features/basketSlice";
 
-const DishRow = ({ id, name, description, price, image }) => {
-  const items = useSelector((state) => selectBasketItemsWithId(state, id));
-  const dispatch = useDispatch();
+  const DishRow = ({ id, name, description, price, image }) => {
+    const items = useSelector((state) => selectBasketItemsWithId(state, id));
+    const dispatch = useDispatch();
 
-  const addItemToBasket = () => {
-    dispatch(addToBasket({ id, name, description, price, image }));
+    const addItemToBasket = () => {
+      dispatch(addToBasket({ id, name, description, price, image }));
+    };
+
+    const removeItemFromBasket = () => {
+      if (!items.length > 0) return;
+
+      dispatch(removeFromBasket({ id }));
+    };
+
+    return (
+      <>
+      ...
+        <TouchableOpacity
+          disabled={!items.length}
+          onPress={removeItemFromBasket}
+        >
+          <MinusCircleIcon
+            color={items.length > 0 ? "#00CCBB" : "gray"}
+            size={40}
+          />
+        </TouchableOpacity>
+        <Text>{items.length}</Text>
+        <TouchableOpacity onPress={addItemToBasket}>
+          <PlusCircleIcon color="#00CCBB" size={40} />
+        </TouchableOpacity>
+      ... 
+      </>
+    );
   };
-
-  const removeItemFromBasket = () => {
-    if (!items.length > 0) return;
-
-    dispatch(removeFromBasket({ id }));
-  };
-
-  return (
-    <>
-    ...
-      <TouchableOpacity
-        disabled={!items.length}
-        onPress={removeItemFromBasket}
-      >
-        <MinusCircleIcon
-          color={items.length > 0 ? "#00CCBB" : "gray"}
-          size={40}
-        />
-      </TouchableOpacity>
-      <Text>{items.length}</Text>
-      <TouchableOpacity onPress={addItemToBasket}>
-        <PlusCircleIcon color="#00CCBB" size={40} />
-      </TouchableOpacity>
-    ... 
-    </>
-  );
-};
 `;
 
-const codeReduxBasket = `// .../features/basketSlice.js 
-import { createSlice } from "@reduxjs/toolkit";
+const codeReduxBasket = `
+  // .../features/basketSlice.js 
+  import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  items: [],
-};
+  const initialState = {
+    items: [],
+  };
 
-export const basketSlice = createSlice({
-  name: "basket",
-  initialState,
-  reducers: {
-    addToBasket: (state, action) => {
-      state.items = [...state.items, action.payload];
-    },
-    removeFromBasket: (state, action) => {
-      const index = state.items.findIndex(
-        (item) => item.id === action.payload.id
-      );
-
-      let newBasket = [...state.items];
-
-      if (index >= 0) {
-        newBasket.splice(index, 1);
-      } else {
-        console.warn(
-          \`Can't remove product (id: \${action.payload.id}) as it's not in basket!\`
+  export const basketSlice = createSlice({
+    name: "basket",
+    initialState,
+    reducers: {
+      addToBasket: (state, action) => {
+        state.items = [...state.items, action.payload];
+      },
+      removeFromBasket: (state, action) => {
+        const index = state.items.findIndex(
+          (item) => item.id === action.payload.id
         );
-      }
 
-      state.items = newBasket;
+        let newBasket = [...state.items];
+
+        if (index >= 0) {
+          newBasket.splice(index, 1);
+        } else {
+          console.warn(
+            \`Can't remove product (id: \${action.payload.id}) as it's not in basket!\`
+          );
+        }
+
+        state.items = newBasket;
+      },
     },
-  },
-});
+  });
 
-// Action creators are generated for each case reducer function
-export const { addToBasket, removeFromBasket } = basketSlice.actions;
+  // Action creators are generated for each case reducer function
+  export const { addToBasket, removeFromBasket } = basketSlice.actions;
 
-export const selectBasketItems = (state) => state.basket.items;
+  export const selectBasketItems = (state) => state.basket.items;
 
-export const selectBasketItemsWithId = (state, id) =>
-  state.basket.items.filter((item) => item.id === id);
+  export const selectBasketItemsWithId = (state, id) =>
+    state.basket.items.filter((item) => item.id === id);
 
-export const selectBasketTotal = (state) =>
-  state.basket.items.reduce((total, item) => (total += item.price), 0);
+  export const selectBasketTotal = (state) =>
+    state.basket.items.reduce((total, item) => (total += item.price), 0);
 
-export default basketSlice.reducer;
+  export default basketSlice.reducer;
 `;
