@@ -9,6 +9,7 @@ import profilePic from "../assets/profile-pic.jpg";
 import PageTitle from "../components/pageTitle";
 import Main from "../layouts/main";
 import Section from "../layouts/section";
+import AnimatedImage from "components/AnimatedImage";
 
 export default function About() {
   const router = useRouter();
@@ -55,14 +56,17 @@ export default function About() {
                 passent pas la tête et celles de mes clients.
               </p>
             </PresentationSection>
-            <div className="relative overflow-hidden h-[80vh] w-full lg:w-2/3">
-              <Image
-                src={profilePic}
-                layout="fill"
-                objectFit="cover"
-                alt="Rayhan"
-                style={{ filter: "grayscale(80%)" }}
-              />
+            <div className="overflow-hidden h-[80vh] w-full lg:w-2/3">
+              <AnimatedImage>
+                <Image
+                  src={profilePic}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Rayhan"
+                  style={{ filter: "grayscale(80%)" }}
+                  priority
+                />
+              </AnimatedImage>
             </div>
           </div>
         </Section>
@@ -105,14 +109,17 @@ export default function About() {
                 .
               </p>
             </PresentationSection>
-            <div className="relative overflow-hidden h-[80vh] w-full lg:w-2/3">
-              <Image
-                src={futsalPic}
-                layout="fill"
-                objectFit="cover"
-                alt="Rayhan"
-                style={{ filter: "grayscale(80%)" }}
-              />
+            <div className="overflow-hidden h-[80vh] w-full lg:w-2/3">
+              <AnimatedImage>
+                <Image
+                  src={futsalPic}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Rayhan"
+                  style={{ filter: "grayscale(80%)" }}
+                  priority
+                />
+              </AnimatedImage>
             </div>
           </div>
         </Section>

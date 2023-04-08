@@ -10,8 +10,6 @@ export default function Project({ pos, link, src, label, tags }) {
     target: ref,
     offset: ["end end", "start end"],
   });
-  const left = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
-  const right = useTransform(scrollYProgress, [0, 1], ["0%", "5%"]);
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 
   let toTheLeft = pos % 2 === 0 ? true : false;
@@ -19,7 +17,7 @@ export default function Project({ pos, link, src, label, tags }) {
     <div ref={ref}>
       <Link href={link} scroll={false}>
         <motion.article
-          style={pos > 0 && (!toTheLeft ? { x: left, y } : { x: right, y })}
+          style={{ y }}
           className={`py-4 space-y-6 lg:max-w-5xl ${
             !toTheLeft && " lg:ml-auto"
           }`}
@@ -32,7 +30,7 @@ export default function Project({ pos, link, src, label, tags }) {
               alt={label}
               layout="responsive"
               objectFit="contain"
-              className="group-hover:scale-105 ease-[cubic-bezier(0.6,0.01,-0.05,0.9)] duration-100"
+              className="group-hover:scale-105 ease-[cubic-bezier(0.6,0.01,-0.05,0.9)] duration-300"
             />
           </div>
           <div className="space-y-2">

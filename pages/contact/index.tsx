@@ -5,6 +5,7 @@ import Section from "../../layouts/section";
 import { useRouter } from "next/router";
 import sendMessage, { Payload } from "../api/contact/contact.service";
 import ClipLoader from "react-spinners/ClipLoader";
+import PageTitle from "components/pageTitle";
 
 type Status = {
   success: undefined | boolean;
@@ -61,9 +62,7 @@ const Index = () => {
       </Head>
       <Main home={false} router={router.asPath}>
         <Section>
-          <h1 className="uppercase tracking-wider text-4xl text-redMain-500 text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-6xl">
-            Contact
-          </h1>
+          <PageTitle title="Contact" />
           <div className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-4">
             <div className="w-full shrink-0 lg:w-1/2">
               <h2 className="text-xl lg:text-2xl mb-8">

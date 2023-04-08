@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import Section from "../layouts/section";
 
 export default function Footer() {
   return (
-    <footer className="border-t-[1px]  py-4 ">
-      <div className="container mx-auto px-5">
+    <footer className="border-t-[1px] py-4 ">
+      <div className="px-5 md:px-10">
         <div className="flex flex-col items-start w-full text-center space-y-5 text-redMain-500 pb-10 lg:flex-row lg:justify-between lg:space-y-0 lg:pb-20">
           <h3 className="hidden lg:block">errka.</h3>
           <div className="flex flex-col text-left lg:w-1/2 lg:pr-16 ">
