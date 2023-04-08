@@ -64,6 +64,7 @@ export default function About() {
                   objectFit="cover"
                   alt="Rayhan"
                   style={{ filter: "grayscale(80%)" }}
+                  priority
                 />
               </AnimatedImage>
             </div>
@@ -116,6 +117,7 @@ export default function About() {
                   objectFit="cover"
                   alt="Rayhan"
                   style={{ filter: "grayscale(80%)" }}
+                  priority
                 />
               </AnimatedImage>
             </div>
