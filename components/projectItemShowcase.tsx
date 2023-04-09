@@ -20,8 +20,6 @@ export default function ProjectItemShowcase({
   className,
   mobile,
 }: Props) {
-  console.log(mobile);
-
   return (
     <div
       className={`px-8 pt-8 overflow-hidden max-h-${

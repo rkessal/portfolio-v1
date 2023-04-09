@@ -36,6 +36,7 @@ export default function PageTitle({ title }: Props) {
         const letters = word.split("");
         return (
           <motion.div
+            key={index}
             variants={titleTransition}
             initial="initial"
             whileInView="animate"
