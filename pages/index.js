@@ -25,11 +25,9 @@ export default function Home({ projectData, preview }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main home={true}>
-        <Navbar />
         <Hero />
         <Projects projectData={projects} />
       </Main>
-      <Footer />
     </>
   );
 }

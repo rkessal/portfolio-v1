@@ -69,9 +69,19 @@ export default function Oms() {
               l&apos;association.
             </p>
           </ProjectDescriptionText>
-          <div className="grid grid-cols-2 gap-2 lg:gap-4">
-            <ProjectItemShowcase src={omsMobile2} width={437} height={965} />
-            <ProjectItemShowcase src={omsMobile3} width={437} height={965} />
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-4">
+            <ProjectItemShowcase
+              src={omsMobile2}
+              width={437}
+              height={965}
+              mobile
+            />
+            <ProjectItemShowcase
+              src={omsMobile3}
+              width={437}
+              height={965}
+              mobile
+            />
           </div>
 
           <ProjectDescriptionText title="Navigation">

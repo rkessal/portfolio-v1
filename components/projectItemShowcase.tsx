@@ -9,6 +9,7 @@ type Props = {
   height: number;
   video?: string;
   className?: string;
+  mobile?: boolean;
 };
 
 export default function ProjectItemShowcase({
@@ -17,8 +18,9 @@ export default function ProjectItemShowcase({
   height,
   video,
   className,
+  mobile,
 }: Props) {
-  const mobile = width < height ? true : false;
+  console.log(mobile);
 
   return (
     <div

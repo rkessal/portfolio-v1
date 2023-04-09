@@ -33,7 +33,7 @@ export default function Easybank() {
         >
           <ProjectItemShowcase src={easybank} width={1903} height={1323} />
           <ProjectItemShowcase src={easybank2} width={1903} height={893} />
-          <div className="grid grid-cols-2 gap-2 lg:gap-4">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-4">
             <ProjectItemShowcase
               src={easybankMobile}
               width={437}
