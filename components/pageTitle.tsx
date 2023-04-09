@@ -6,7 +6,7 @@ type Props = {
 };
 
 export default function PageTitle({ title }: Props) {
-  const titleAsChar = title.split("");
+  const words = title.split(" ");
   const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
   const titleTransition = {
@@ -31,18 +31,28 @@ export default function PageTitle({ title }: Props) {
   };
 
   return (
-    <motion.div
-      variants={titleTransition}
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true }}
-      className="flex whitespace-pre shrink-0 overflow-hidden text-5xl leading-tight text-redMain mb-8 md:leading-tight md:text-6xl lg:text-7xl lg:leading-tight lg:max-w-7xl lg:mb-12 2xl:leading-tight 2xl:text-8xl"
-    >
-      {titleAsChar.map((char, index) => (
-        <motion.span key={index} variants={letterTransition}>
-          {char}
-        </motion.span>
-      ))}
-    </motion.div>
+    <div className="flex flex-row flex-wrap mb-8 lg:max-w-7xl lg:mb-12">
+      {words.map((word, index) => {
+        const letters = word.split("");
+        return (
+          <motion.div
+            variants={titleTransition}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="flex whitespace-pre overflow-y-hidden text-5xl leading-tight md:leading-tight md:text-6xl lg:text-7xl lg:leading-tight  2xl:leading-tight 2xl:text-8xl"
+          >
+            {letters.map((char, index) => (
+              <>
+                <motion.span key={index} variants={letterTransition}>
+                  {char}
+                </motion.span>
+                {index === letters.length - 1 ? <span> </span> : ""}
+              </>
+            ))}
+          </motion.div>
+        );
+      })}
+    </div>
   );
 }
