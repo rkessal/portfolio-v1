@@ -5,8 +5,8 @@ import NavbarItem from "./navbarItem";
 
 export default function Navbar() {
   return (
-    <nav className="sticky px-5 md:px-10 py-5 flex flex-row justify-between items-center ">
-      <Link href="/">
+    <nav className="sticky top-0 z-50 px-5 md:px-10 py-5 flex flex-row justify-between items-center ">
+      <Link scroll={false} href="/">
         <a>
           <Image src={logo} height={50} width={50} alt="logo" />
         </a>

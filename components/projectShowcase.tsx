@@ -22,7 +22,7 @@ export default function ProjectShowcase({
     <>
       <PageTitle title={title} />
       <div className="flex flex-col space-y-6 lg:space-y-0 lg:flex-row">
-        <div className="flex flex-col mt-20 w-full space-y-10 order-2 lg:space-y-12 lg:max-w-xs lg:mt-0 lg:h-full xl:max-w-sm lg:sticky lg:top-16">
+        <div className="flex flex-col mt-20 w-full space-y-10 order-2 lg:space-y-12 lg:max-w-xs lg:mt-0 lg:h-full xl:max-w-sm lg:sticky lg:top-24">
           <div className="space-y-3">
             <h2 className="text-xl font-medium uppercase tracking-wider">
               Stack
