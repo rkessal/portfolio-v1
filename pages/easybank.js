@@ -38,21 +38,25 @@ export default function Easybank() {
               src={easybankMobile}
               width={437}
               height={965}
+              mobile
             />
             <ProjectItemShowcase
               src={easybankMobile2}
               width={437}
               height={965}
+              mobile
             />
             <ProjectItemShowcase
               src={easybankMobile3}
               width={437}
               height={965}
+              mobile
             />
             <ProjectItemShowcase
               src={easybankMobile4}
               width={437}
               height={965}
+              mobile
             />
           </div>
         </ProjectShowcase>

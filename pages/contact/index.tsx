@@ -142,7 +142,7 @@ const Index = () => {
                 </div>
                 <div>
                   En cliquant sur Envoyer, vous acceptez la{" "}
-                  <Link href="/privacy-policy">
+                  <Link href="/privacy-policy" scroll={false}>
                     <a className="text-redMain-500 hover:underline">
                       politique de confidentialité
                     </a>

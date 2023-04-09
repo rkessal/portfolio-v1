@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t-[1px] py-4 ">
       <div className="px-5 md:px-10">
         <div className="flex flex-col items-start w-full text-center space-y-5 lg:flex-row lg:justify-between lg:space-y-0 lg:pb-20">
-          <Link href="/">
+          <Link scroll={false} href="/">
             <a className="hidden lg:block text-redMain-500"> errka.</a>
           </Link>
           <div className="flex flex-col text-left lg:w-1/2 lg:pr-16 ">
@@ -45,7 +45,7 @@ export default function Footer() {
             hello@errka.dev
           </a>
 
-          <Link href="/privacy-policy">
+          <Link href="/privacy-policy" scroll={false}>
             <a className="hover:underline" aria-label="linkedin">
               Politique de confidentialité
             </a>
