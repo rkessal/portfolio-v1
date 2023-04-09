@@ -7,7 +7,7 @@ type Props = {
 
 const AnimatedImage = ({ children }: Props) => {
   const transition = {
-    delay: 0.4,
+    delay: 1.1,
     duration: 1.4,
     ease: [0.6, 0.01, -0.05, 0.9],
   };
