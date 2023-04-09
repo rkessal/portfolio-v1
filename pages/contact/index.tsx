@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import sendMessage, { Payload } from "../api/contact/contact.service";
 import ClipLoader from "react-spinners/ClipLoader";
 import PageTitle from "components/pageTitle";
+import Link from "next/link";
 
 type Status = {
   success: undefined | boolean;
@@ -138,6 +139,15 @@ const Index = () => {
                   >
                     Votre message
                   </label>
+                </div>
+                <div>
+                  En cliquant sur Envoyer, vous acceptez la{" "}
+                  <Link href="/privacy-policy">
+                    <a className="text-redMain-500 hover:underline">
+                      politique de confidentialité
+                    </a>
+                  </Link>
+                  .
                 </div>
 
                 <button

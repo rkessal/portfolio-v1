@@ -106,11 +106,7 @@ const animation = {
   },
 };
 
-export function ProjectPresentationText({
-  children,
-}: {
-  children: JSX.Element[];
-}) {
+export function ProjectPresentationText({ children }: { children: string }) {
   return (
     <p className="text-2xl mb-10 leading-normal lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
       {children}

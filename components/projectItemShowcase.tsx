@@ -9,6 +9,7 @@ type Props = {
   height: number;
   video?: string;
   className?: string;
+  mobile?: boolean;
 };
 
 export default function ProjectItemShowcase({
@@ -17,9 +18,8 @@ export default function ProjectItemShowcase({
   height,
   video,
   className,
+  mobile,
 }: Props) {
-  const mobile = width < height ? true : false;
-
   return (
     <div
       className={`px-8 pt-8 overflow-hidden max-h-${

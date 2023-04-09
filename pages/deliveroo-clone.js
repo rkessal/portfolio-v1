@@ -41,6 +41,7 @@ export default function DeliverooClone() {
               height={960}
               width={540}
               video
+              mobile
             />
 
             <span className="hidden md:block">
@@ -48,31 +49,36 @@ export default function DeliverooClone() {
                 src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0025_rgsyaq.jpg"
                 width={1080}
                 height={1920}
+                mobile
               />
             </span>
           </div>
-          <div className="grid grid-cols-2 gap-2 lg:gap-4">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-4">
             <ProjectItemShowcase
               src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0026_otikw6.jpg"
               width={1080}
               height={1920}
+              mobile
             />
             <ProjectItemShowcase
               src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0028_kil9qw.jpg"
               width={1080}
               height={1920}
+              mobile
             />
           </div>
-          <div className="grid grid-cols-2 gap-2 lg:gap-4">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-4">
             <ProjectItemShowcase
               src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0030_xi1xkr.jpg"
               width={1080}
               height={1920}
+              mobile
             />
             <ProjectItemShowcase
               src="https://res.cloudinary.com/dsmrg2vyw/image/upload/v1665776575/deliveroo-clone/IMG-20221014-WA0024_p176rs.jpg"
               width={1080}
               height={1920}
+              mobile
             />
           </div>
           <ProjectDescriptionText title="Le projet">
