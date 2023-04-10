@@ -8,7 +8,7 @@ type Props = {
   home?: boolean;
 };
 
-function Main({ router, children }: Props) {
+const Main = ({ router, children }: Props) => {
   const variants = {
     hidden: {
       opacity: 0,
@@ -37,5 +37,5 @@ function Main({ router, children }: Props) {
       </motion.div>
     </>
   );
-}
+};
 export default Main;
