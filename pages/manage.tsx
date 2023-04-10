@@ -1,14 +1,12 @@
-import ProjectShowcase from "../components/projectShowcase";
-import Project from "../layouts/project";
-import Zoom from "react-medium-image-zoom";
+import Project from "../layouts/Project";
 import "react-medium-image-zoom/dist/styles.css";
-import Image from "next/image";
-import Section from "../layouts/section";
-import ProjectItemShowcase from "../components/projectItemShowcase";
+import Section from "../layouts/Section";
 import manage from "../assets/manage/manage.png";
 import manage2 from "../assets/manage/manage-2.png";
 import manageMobile from "../assets/manage/manage-mobile.png";
 import manageMobile2 from "../assets/manage/manage-2-mobile.png";
+import ProjectItemShowcase from "components/ProjectItemShowcase";
+import ProjectShowcase from "components/ProjectShowcase";
 
 export default function Manage() {
   const project = {

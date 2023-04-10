@@ -1,15 +1,13 @@
-import ProjectShowcase from "../components/projectShowcase";
-import Project from "../layouts/project";
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import Image from "next/image";
-import Section from "../layouts/section";
-import hulu from "../assets/hulu/hulu.png";
-import hulu2 from "../assets/hulu/hulu-2.png";
-import huluTablet from "../assets/hulu/hulu-tablet.png";
-import huluMobile from "../assets/hulu/hulu-mobile.png";
 import huluMobile2 from "../assets/hulu/hulu-2-mobile.png";
-import ProjectItemShowcase from "../components/projectItemShowcase";
+import hulu2 from "../assets/hulu/hulu-2.png";
+import huluMobile from "../assets/hulu/hulu-mobile.png";
+import huluTablet from "../assets/hulu/hulu-tablet.png";
+import hulu from "../assets/hulu/hulu.png";
+import Project from "../layouts/Project";
+import ProjectItemShowcase from "components/ProjectItemShowcase";
+import ProjectShowcase from "components/ProjectShowcase";
+import Section from "layouts/Section";
 
 export default function HuluClone() {
   const project = {

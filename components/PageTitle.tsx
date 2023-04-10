@@ -5,7 +5,7 @@ type Props = {
   title: string;
 };
 
-export default function PageTitle({ title }: Props) {
+const PageTitle = ({ title }: Props) => {
   const words = title.split(" ");
   const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -44,16 +44,16 @@ export default function PageTitle({ title }: Props) {
             className="flex whitespace-pre overflow-y-hidden text-5xl leading-tight md:leading-tight md:text-6xl lg:text-7xl lg:leading-tight  2xl:leading-tight 2xl:text-8xl"
           >
             {letters.map((char, index) => (
-              <>
-                <motion.span key={index} variants={letterTransition}>
-                  {char}
-                </motion.span>
-                {index === letters.length - 1 ? <span> </span> : ""}
-              </>
+              <motion.span key={index} variants={letterTransition}>
+                {char}
+                {index === letters.length - 1 && " "}
+              </motion.span>
             ))}
           </motion.div>
         );
       })}
     </div>
   );
-}
+};
+
+export default PageTitle;

@@ -1,10 +1,9 @@
-import ProjectItemShowcase from "components/projectItemShowcase";
+import ProjectItemShowcase from "components/ProjectItemShowcase";
 import ProjectShowcase, {
   ProjectDescriptionText,
-  ProjectPresentationText,
-} from "components/projectShowcase";
-import Project from "layouts/project";
-import Section from "layouts/section";
+} from "components/ProjectShowcase";
+import Project from "layouts/Project";
+import Section from "layouts/Section";
 import Link from "next/link";
 import { CopyBlock, atomOneLight } from "react-code-blocks";
 
@@ -18,6 +17,7 @@ export default function DeliverooClone() {
         repo: "https://www.github.com/rkessal/deliveroo-clone",
       },
     ],
+    desc: 'Ce projet est un clone de l\'application "Deliveroo", développé avec React Native, une application de livraison de plat à domicile.',
   };
 
   return (
@@ -30,11 +30,6 @@ export default function DeliverooClone() {
           links={project.links}
           key={project.id}
         >
-          <ProjectPresentationText>
-            Ce projet est un clone de l&apos;application &quot;Deliveroo&quot;,
-            développé avec React Native, une application de livraison de plat à
-            domicile.
-          </ProjectPresentationText>
           <div className="grid md:grid-cols-2 gap-2 lg:gap-4">
             <ProjectItemShowcase
               src="https://res.cloudinary.com/dsmrg2vyw/video/upload/v1665776535/deliveroo-clone/deliveroo-vid_tzm3il.mp4"

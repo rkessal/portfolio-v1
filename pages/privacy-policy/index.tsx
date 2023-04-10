@@ -1,8 +1,8 @@
-import PageTitle from "components/pageTitle";
-import { ProjectPresentationText } from "components/projectShowcase";
-import { ProjectDescriptionText } from "components/projectShowcase";
-import Main from "layouts/main";
-import Section from "layouts/section";
+import PageTitle from "components/PageTitle";
+import { ProjectPresentationText } from "components/ProjectShowcase";
+import { ProjectDescriptionText } from "components/ProjectShowcase";
+import Main from "layouts/Main";
+import Section from "layouts/Section";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";

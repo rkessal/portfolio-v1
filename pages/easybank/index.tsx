@@ -1,15 +1,15 @@
-import ProjectShowcase from "../components/projectShowcase";
-import Project from "../layouts/project";
-import Section from "../layouts/section";
-import ProjectItemShowcase from "../components/projectItemShowcase";
-import easybank from "../assets/easybank/easybank.png";
-import easybank2 from "../assets/easybank/easybank-2.png";
-import easybankMobile from "../assets/easybank/easybank-mobile.png";
-import easybankMobile2 from "../assets/easybank/easybank-2-mobile.png";
-import easybankMobile3 from "../assets/easybank/easybank-3-mobile.png";
-import easybankMobile4 from "../assets/easybank/easybank-4-mobile.png";
+import Project from "layouts/Project";
+import easybank from "assets/easybank/easybank.png";
+import easybank2 from "assets/easybank/easybank-2.png";
+import easybankMobile from "assets/easybank/easybank-mobile.png";
+import easybankMobile2 from "assets/easybank/easybank-2-mobile.png";
+import easybankMobile3 from "assets/easybank/easybank-3-mobile.png";
+import easybankMobile4 from "assets/easybank/easybank-4-mobile.png";
+import ProjectItemShowcase from "components/ProjectItemShowcase";
+import ProjectShowcase from "components/ProjectShowcase";
+import Section from "layouts/Section";
 
-export default function Easybank() {
+const Easybank = () => {
   const project = {
     title: "Easybank",
     desc: "Ce projet est un challenge du site \"frontendmentor\", le but étant de reproduire un site web en s'inspirant des images qui nous sont fournies. C'est un site qui présente les services pour une banque qui s'appelle Easybank. Durant ce projet, j'ai appri à utiliser le framework ChakraUI. ",
@@ -63,4 +63,6 @@ export default function Easybank() {
       </Section>
     </Project>
   );
-}
+};
+
+export default Easybank;
