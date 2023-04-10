@@ -1,7 +1,7 @@
-import Section from "../layouts/section";
 import { useScroll, useTransform, motion } from "framer-motion";
+import Section from "layouts/Section";
 
-export default function Hero() {
+const Hero = () => {
   let { scrollY } = useScroll();
   let y = useTransform(scrollY, [0, 800], ["0%", "40%"]);
 
@@ -17,4 +17,6 @@ export default function Hero() {
       </motion.div>
     </Section>
   );
-}
+};
+
+export default Hero;

@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import BackToHome from "../components/backToHome";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Footer from "components/Footer";
+import Navbar from "components/Navbar";
 
 type Props = {
-  router: string;
+  router?: string;
   children: JSX.Element | JSX.Element[];
   home?: boolean;
 };
@@ -32,11 +31,10 @@ function Main({ router, children }: Props) {
         animate="enter"
         exit="exit"
         transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
-        className="px-5 md:px-10 font-Inter"
       >
-        {children}
+        <div className="px-5 md:px-10 font-Inter">{children}</div>
+        <Footer />
       </motion.div>
-      <Footer />
     </>
   );
 }

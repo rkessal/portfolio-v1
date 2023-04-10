@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.svg";
-import NavbarItem from "./navbarItem";
+import NavbarItem from "./NavbarItem";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 px-5 md:px-10 py-5 flex flex-row justify-between items-center ">
       <Link scroll={false} href="/">
         <a>
-          <Image src={logo} height={50} width={50} alt="logo" />
+          <Image priority src={logo} height={50} width={50} alt="logo" />
         </a>
       </Link>
       <div className="space-x-9">
@@ -21,4 +21,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

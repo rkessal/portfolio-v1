@@ -1,15 +1,17 @@
 import Head from "next/head";
-import Footer from "../components/footer";
-import Hero from "../components/hero";
-import Navbar from "../components/navbar";
-import Projects from "../components/projects";
-import Main from "../layouts/main";
-
+import Projects from "../components/Projects";
+import Main from "../layouts/Main";
 import { usePreviewSubscription, getClient } from "@lib/sanity";
 import { groq } from "next-sanity";
 import { useRouter } from "next/router";
+import Hero from "components/Hero";
 
-export default function Home({ projectData, preview }) {
+type Props = {
+  projectData: any;
+  preview: any;
+};
+
+const Home = ({ projectData, preview }: Props) => {
   const router = useRouter();
 
   const { data: projects } = usePreviewSubscription(query, {
@@ -30,7 +32,9 @@ export default function Home({ projectData, preview }) {
       </Main>
     </>
   );
-}
+};
+
+export default Home;
 
 const query = groq`
     *[_type == "project"] | order(_createdAt desc){
@@ -44,7 +48,11 @@ const query = groq`
     }
     `;
 
-export async function getStaticProps({ params, preview = false }) {
+export async function getStaticProps({
+  preview = false,
+}: {
+  preview: boolean;
+}) {
   const project = await getClient(preview).fetch(query);
 
   return {
