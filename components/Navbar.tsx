@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.svg";
-import NavbarItem from "./navbarItem";
+import NavbarItem from "./NavbarItem";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 px-5 md:px-10 py-5 flex flex-row justify-between items-center ">
       <Link scroll={false} href="/">
@@ -21,4 +21,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

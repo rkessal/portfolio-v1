@@ -1,15 +1,15 @@
+import AnimatedImage from "components/AnimatedImage";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Main from "layouts/Main";
+import Section from "layouts/Section";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef } from "react";
-import futsalPic from "../assets/futsal-pic.jpg";
-import profilePic from "../assets/profile-pic.jpg";
-import PageTitle from "../components/pageTitle";
-import Main from "../layouts/main";
-import Section from "../layouts/section";
-import AnimatedImage from "components/AnimatedImage";
+import futsalPic from "assets/futsal-pic.jpg";
+import profilePic from "assets/profile-pic.jpg";
+import PageTitle from "components/PageTitle";
 
 export default function About() {
   const router = useRouter();

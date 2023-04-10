@@ -1,8 +1,8 @@
-import Project from "./project";
-import Section from "../layouts/section";
+import Project from "./Project";
+import Section from "../layouts/Section";
 import { urlFor } from "../lib/sanity";
 
-export default function Projects({ projectData }: { projectData: any[] }) {
+const Projects = ({ projectData }: { projectData: any[] }) => {
   return (
     <Section>
       <div className="space-y-12">
@@ -10,7 +10,7 @@ export default function Projects({ projectData }: { projectData: any[] }) {
           projectData.map((project: any) => (
             <Project
               key={project._id}
-              pos={projectData.indexOf(project)}
+              index={projectData.indexOf(project)}
               label={project.title}
               link={`/${project.link}`}
               src={urlFor(project.image).url()}
@@ -20,4 +20,6 @@ export default function Projects({ projectData }: { projectData: any[] }) {
       </div>
     </Section>
   );
-}
+};
+
+export default Projects;

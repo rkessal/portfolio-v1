@@ -9,11 +9,6 @@ type Response = {
   message: string;
 };
 
-const response: Response = {
-  error: true,
-  message: "",
-};
-
 const headers = {
   Accept: "application/json, text/plain, */*",
   "Content-Type": "application/json",

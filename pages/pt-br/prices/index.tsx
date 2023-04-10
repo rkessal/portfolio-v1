@@ -1,29 +1,19 @@
-import Main from "layouts/main";
-import Section from "layouts/section";
+import Main from "layouts/Main";
+import Section from "layouts/Section";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import React from "react";
-import ProjectShowcase, {
-  ProjectDescriptionText,
-  ProjectPresentationText,
-} from "components/projectShowcase";
-import Footer from "components/footer";
-import Navbar from "components/navbar";
+import { ProjectDescriptionText } from "components/ProjectShowcase";
+import PageTitle from "components/PageTitle";
 
 function Prices() {
-  const router = useRouter();
   return (
     <>
       <Head>
         <title>Preços</title>
         <meta name="description" content="Errká's Portfolio" />
       </Head>
-      <Main home={true}>
-        <Navbar />
+      <Main>
         <Section>
-          <h1 className="uppercase tracking-wider text-4xl text-redMain-500 text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-6xl">
-            Pacote
-          </h1>
+          <PageTitle title="Pacote" />
           <h2 className="uppercase tracking-wider text-3xl text-black text-center font-medium mb-16  md:text-left lg:w-2/3 lg:text-5xl">
             Site de apresentação
           </h2>
@@ -83,7 +73,6 @@ function Prices() {
             </p>
           </div>
         </Section>
-        <Footer />
       </Main>
     </>
   );

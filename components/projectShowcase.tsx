@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { FiExternalLink } from "react-icons/fi";
-import PageTitle from "./pageTitle";
+import PageTitle from "./PageTitle";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -11,13 +10,7 @@ type Props = {
   children?: JSX.Element[];
 };
 
-export default function ProjectShowcase({
-  title,
-  desc,
-  stack,
-  links,
-  children,
-}: Props) {
+const ProjectShowcase = ({ title, desc, stack, links, children }: Props) => {
   return (
     <>
       <PageTitle title={title} />
@@ -93,9 +86,13 @@ export default function ProjectShowcase({
       </div>
     </>
   );
-}
+};
 
-const transition = { duration: 1.6, ease: [0.6, 0.01, -0.05, 0.9] };
+const transition = {
+  delay: 0.2,
+  duration: 1.3,
+  ease: [0.17, 0.57, 0.4, 0.96],
+};
 
 const animation = {
   initial: { y: 30, opacity: 0 },
@@ -106,21 +103,21 @@ const animation = {
   },
 };
 
-export function ProjectPresentationText({ children }: { children: string }) {
+export const ProjectPresentationText = ({ children }: { children: string }) => {
   return (
     <p className="text-2xl mb-10 leading-normal lg:-mt-3 lg:leading-relaxed lg:text-4xl text-indent">
       {children}
     </p>
   );
-}
+};
 
-export function ProjectDescriptionText({
+export const ProjectDescriptionText = ({
   title,
   children,
 }: {
   title?: string;
   children: JSX.Element | JSX.Element[];
-}) {
+}) => {
   return (
     <div className="overflow-hidden">
       <motion.div
@@ -139,4 +136,6 @@ export function ProjectDescriptionText({
       </motion.div>
     </div>
   );
-}
+};
+
+export default ProjectShowcase;

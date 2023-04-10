@@ -1,16 +1,15 @@
-import Section from "../layouts/section";
+import Section from "layouts/Section";
 import "react-medium-image-zoom/dist/styles.css";
+import Project from "layouts/Project";
+import oms from "assets/oms/oms.png";
+import oms2 from "assets/oms/oms-2.png";
+import oms3 from "assets/oms/oms-3.png";
+import omsMobile2 from "assets/oms/oms-2-mobile.png";
+import omsMobile3 from "assets/oms/oms-3-mobile.png";
+import ProjectItemShowcase from "components/ProjectItemShowcase";
 import ProjectShowcase, {
   ProjectDescriptionText,
-  ProjectPresentationText,
-} from "../components/projectShowcase";
-import Project from "../layouts/project";
-import ProjectItemShowcase from "../components/projectItemShowcase";
-import oms from "../assets/oms/oms.png";
-import oms2 from "../assets/oms/oms-2.png";
-import oms3 from "../assets/oms/oms-3.png";
-import omsMobile2 from "../assets/oms/oms-2-mobile.png";
-import omsMobile3 from "../assets/oms/oms-3-mobile.png";
+} from "components/ProjectShowcase";
 
 export default function Oms() {
   const project = {

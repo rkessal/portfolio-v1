@@ -1,11 +1,11 @@
 import Head from "next/head";
 import React, { FormEvent, useState } from "react";
-import Main from "../../layouts/main";
-import Section from "../../layouts/section";
+import Main from "../../layouts/Main";
+import Section from "../../layouts/Section";
 import { useRouter } from "next/router";
 import sendMessage, { Payload } from "../api/contact/contact.service";
 import ClipLoader from "react-spinners/ClipLoader";
-import PageTitle from "components/pageTitle";
+import PageTitle from "components/PageTitle";
 import Link from "next/link";
 
 type Status = {

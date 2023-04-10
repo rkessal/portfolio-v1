@@ -1,8 +1,14 @@
 import Head from "next/head";
-import Main from "./main";
+import Main from "./Main";
 import { useRouter } from "next/router";
 
-export default function Project({ title, desc, children }) {
+type Props = {
+  title: string;
+  desc: string;
+  children: JSX.Element[] | JSX.Element;
+};
+
+const Project = ({ title, desc, children }: Props) => {
   const router = useRouter();
   return (
     <>
@@ -13,4 +19,6 @@ export default function Project({ title, desc, children }) {
       <Main router={router.asPath}>{children}</Main>
     </>
   );
-}
+};
+
+export default Project;

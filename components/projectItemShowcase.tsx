@@ -1,25 +1,24 @@
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Image, { StaticImageData } from "next/image";
 import AnimatedImage from "./AnimatedImage";
 
 type Props = {
-  src: StaticImageData;
+  src: StaticImageData | string;
   width: number;
   height: number;
-  video?: string;
+  video?: boolean;
   className?: string;
   mobile?: boolean;
 };
 
-export default function ProjectItemShowcase({
+const ProjectItemShowcase = ({
   src,
   width,
   height,
   video,
   className,
   mobile,
-}: Props) {
+}: Props) => {
   return (
     <div
       className={`px-8 pt-8 overflow-hidden max-h-${
@@ -48,4 +47,6 @@ export default function ProjectItemShowcase({
       )}
     </div>
   );
-}
+};
+
+export default ProjectItemShowcase;

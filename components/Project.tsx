@@ -1,10 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import Tag from "./tag";
+import Tag from "./Tag";
 import { useTransform, useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 
-export default function Project({ pos, link, src, label, tags }) {
+type Props = {
+  index: number;
+  link: string;
+  src: string;
+  label: string;
+  tags: Tag[];
+};
+
+type Tag = {
+  tag: string;
+};
+
+const Project = ({ index, link, src, label, tags }: Props) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -12,7 +24,7 @@ export default function Project({ pos, link, src, label, tags }) {
   });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 
-  let toTheLeft = pos % 2 === 0 ? true : false;
+  let toTheLeft = index % 2 === 0 ? true : false;
   return (
     <div ref={ref}>
       <Link href={link} scroll={false}>
@@ -45,4 +57,6 @@ export default function Project({ pos, link, src, label, tags }) {
       </Link>
     </div>
   );
-}
+};
+
+export default Project;
